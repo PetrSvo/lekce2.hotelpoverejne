@@ -7,12 +7,12 @@ import java.math.BigDecimal;
 
 
 public class Booking {
-    private Rooms room;
-    private Guest guest;
-    private Rezervace rezervace;
+    public static void main(String... args){//pokud nebudu tisknout tak odendat
+    Rooms room;  //odendal jsem private a getry a setry, který v Listu nemají význam
+     Guest guest;
 
-
-    private List<Guest> GuestList = new ArrayList<>();
+        {
+     List<Guest> GuestList = new ArrayList<>();
     //Guest Guest1=new Guest("Adela Malikova","1990.13.03.",true);
     // Guest Guest2= new Guest("Jan Dvoracek","1995.05.05.",false);//pridal jsem konstruktor s pokojem
 
@@ -24,38 +24,8 @@ public class Booking {
     //třidu rezervace ted nepotřebuji
 
 
-    public List<Guest> getGuestList() {
-        return GuestList;
-    }
 
-    public void setGuestList(List<Guest> guestList) {
-        GuestList = guestList;
-    }
 
-    public Guest getGuest1() {
-        return Guest1;
-    }
-
-    public void setGuest1(Guest guest1) {
-        Guest1 = guest1;
-    }
-
-    public Guest getGuest2() {
-        return Guest2;
-    }
-
-    public Guest getGuest3() {
-        return Guest3;
-    }
-
-    public void setGuest3(Guest guest3) {
-        Guest3 = guest3;
-    }
-
-    public void setGuest2(Guest guest2) {
-        Guest2 = guest2;
-    }
-    {
      System.out.println(GuestList);
         for(Guest Guest:GuestList){
         Guest.setName(String.valueOf(Guest1));//chtělo to String.valueOf, jinak cerveně podrzený Guest1, tak jsem to tam dal
@@ -69,7 +39,7 @@ public class Booking {
                 System.out.println(Guest.getName()+"narozen"+Guest.getNarozeni());
             }//druhý zpusob převodu na text, asi odkazuju na něco jineho v ArrayListu
 
-}}
+}}}
 
 
 
