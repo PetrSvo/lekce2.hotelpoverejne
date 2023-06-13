@@ -5,7 +5,7 @@ public class Guest {
     String narozeni;//string protože, konstruktor v třídě Booking chtěl text, asi by lepe slo Local.Date.of
 
     boolean work;
-    int Room;
+    //int Room; prozatim pryč, dle doporuceni
     LocalDate datumstart;
     LocalDate datumend;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
 
@@ -13,16 +13,27 @@ public class Guest {
         this.name = name;
         this.narozeni = narozeni;
         this.work = work;
-        Room = room;
+       // Room = room;
         this.datumstart = datumstart;
         this.datumend = datumend;
+    }
+
+    @Override
+    public String toString() {
+        return "Guest{" +
+                "name='" + name + '\'' +
+                ", narozeni='" + narozeni + '\'' +
+                ", work=" + work +
+                ", datumstart=" + datumstart +
+                ", datumend=" + datumend +
+                '}';
     }
 
     public Guest(String name, String narozeni, boolean work, int room) {
         this.name = name;
         this.narozeni = narozeni;
         this.work = work;
-        Room = room;
+      //  Room = room;
     }
 
     public Guest(String name, String narozeni, boolean work) {

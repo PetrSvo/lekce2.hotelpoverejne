@@ -4,10 +4,10 @@ public class Rooms {
     int number;
     int luzka;
     boolean balkon;
-    boolean more;
-    double price; //puvodně jsem měl BigDecimal, asi je to tady možná prozatim zbytecny, tak jsem zkusil double v konstruktoru v třidě Booking nechtělo Bigdecimal prijmout
+     boolean more;
+    BigDecimal price; //puvodně jsem měl BigDecimal, asi je to tady možná prozatim zbytecny, tak jsem zkusil double v konstruktoru v třidě Booking nechtělo Bigdecimal prijmout
 
-    public Rooms(int number, int luzka, boolean balkon, boolean more, double price) {
+    public Rooms(int number, int luzka, boolean balkon, boolean more, BigDecimal price) {
         this.number = number;
         this.luzka = luzka;
         this.balkon = balkon;
@@ -15,6 +15,16 @@ public class Rooms {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Rooms{" +
+                "number=" + number +
+                ", luzka=" + luzka +
+                ", balkon=" + balkon +
+                ", more=" + more +
+                ", price=" + price +
+                '}';
+    }
 
     public int getNumber() {
         return number;
@@ -48,11 +58,11 @@ public class Rooms {
         this.more = more;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 }
