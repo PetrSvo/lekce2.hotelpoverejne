@@ -9,6 +9,23 @@ public class Guest {
     LocalDate datumstart;
     LocalDate datumend;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
 
+
+    public LocalDate getDatumstart() {
+        return datumstart;
+    }
+
+    public void setDatumstart(LocalDate datumstart) {
+        this.datumstart = datumstart;
+    }
+
+    public LocalDate getDatumend() {
+        return datumend;
+    }
+
+    public void setDatumend(LocalDate datumend) {
+        this.datumend = datumend;
+    }
+
     public Guest(String name, String narozeni, boolean work, int room, LocalDate datumstart, LocalDate datumend) {
         this.name = name;
         this.narozeni = narozeni;

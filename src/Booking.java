@@ -13,6 +13,7 @@ public class Booking {
 
 
 
+
      List<Guest> GuestList = new ArrayList<>();
     public void add(Guest newGuest){  //dal jsem bokem, při vypisu bylo červeny
      GuestList.add(newGuest);}
@@ -28,7 +29,8 @@ public class Booking {
     //pomoci adelaName tam nedostanu set.Name. chce to konstruktor, co s tím?
 
 
-}}
+}
+}
 
 
 
