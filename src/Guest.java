@@ -18,16 +18,6 @@ public class Guest {
         this.datumend = datumend;
     }
 
-    @Override
-    public String toString() {
-        return "Guest{" +
-                "name='" + name + '\'' +
-                ", narozeni='" + narozeni + '\'' +
-                ", work=" + work +
-                ", datumstart=" + datumstart +
-                ", datumend=" + datumend +
-                '}';
-    }
 
     public Guest(String name, String narozeni, boolean work, int room) {
         this.name = name;

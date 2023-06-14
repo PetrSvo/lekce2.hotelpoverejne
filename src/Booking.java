@@ -14,8 +14,8 @@ public class Booking {
 
 
      List<Guest> GuestList = new ArrayList<>();
-    // public void add(Guest new Guest){  //dal jsem bokem, při vypisu bylo červeny
-    // GuestList.add(new Guest)}
+    public void add(Guest newGuest){  //dal jsem bokem, při vypisu bylo červeny
+     GuestList.add(newGuest);}
 
     List<Rooms>RoomsList=new ArrayList<>();
     public void add(Rooms newRooms){
