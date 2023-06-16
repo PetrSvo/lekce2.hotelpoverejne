@@ -15,16 +15,7 @@ public class Rooms {
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "Rooms{" +
-                "number=" + number +
-                ", luzka=" + luzka +
-                ", balkon=" + balkon +
-                ", more=" + more +
-                ", price=" + price +
-                '}';
-    }
+
 
     public int getNumber() {
         return number;
