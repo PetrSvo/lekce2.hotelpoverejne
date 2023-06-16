@@ -8,18 +8,21 @@ import java.util.List;
 public class Main {
     public static void main(String... args)
     {
-      //  int početHostu=2000;
-      //  for (int i=0,i<početHostu,i++){
-       //     rezervations.add(new Rezervations())
 
 
-        Rezervations rezervace1= new Rezervations("Adela Malikova", LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),1);
-        Rezervations rezervace2= new Rezervations("Adela Malikova " + "Jan Dvoracek ", LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),3);
+       List<Rezervations>RezervationsList=new ArrayList<>();
 
-        System.out.println(rezervace1.getGuest()+ " se má(jí) ubytovat od " +rezervace1.getDateStart()+ " do " +rezervace1.getDateEnd() + " na pokoji  " + rezervace1.getRooms());
-        System.out.println(rezervace2.getGuest()+ " se má(jí) ubytovat od " +rezervace2.getDateStart()+ " do " +rezervace2.getDateEnd() + " na pokoji  " + rezervace2.getRooms());
-      //  System.out.println(.size()); nefunguje, nejde vložit objekt, asi vyrtvořit pořadí v třídě Rezervations?
-        System.out.println("počet rezervací je 2");
+
+        RezervationsList.add(new Rezervations(1,"Adela Malikova", LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),1));
+        RezervationsList.add(new Rezervations(2,"Adela Malikova " + "Jan Dvoracek ", LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),3));
+        System.out.println(RezervationsList);
+        for(Rezervations Rezervations:RezervationsList)
+            System.out.println(Rezervations.getGuest()+ " se má(jí) ubytovat od " +Rezervations.getDateStart()+ " do " +Rezervations.getDateEnd() + " na pokoji  " + Rezervations.getRooms());
+        System.out.println("Počet rezervaci je "+RezervationsList.size());
+      //  System.out.println(rezervace1.getGuest()+ " se má(jí) ubytovat od " +rezervace1.getDateStart()+ " do " +rezervace1.getDateEnd() + " na pokoji  " + rezervace1.getRooms());
+      //  System.out.println(rezervace2.getGuest()+ " se má(jí) ubytovat od " +rezervace2.getDateStart()+ " do " +rezervace2.getDateEnd() + " na pokoji  " + rezervace2.getRooms());
+     //  System.out.println(getId.size()); //nefunguje, nejde vložit objekt, asi vyrtvořit pořadí v třídě Rezervations?
+      //  System.out.println.("počet rezervací je 2");
 
         List<Rooms>RoomsList=new ArrayList<>();
         RoomsList.add(new Rooms(1, 1, true, true, BigDecimal.valueOf(1000)));
@@ -27,10 +30,10 @@ public class Main {
         RoomsList.add(new Rooms(3,3,false,true,BigDecimal.valueOf(2400)));
 
 
-        System.out.println(RoomsList);
+        System.out.println(RoomsList);{
         for(Rooms Rooms:RoomsList){
             System.out.println("číslo pokoje "+ Rooms.getNumber() + " má " + Rooms.getLuzka() + " lužka/lužek " + " balkon " + Rooms.isBalkon() + " výhledna moře na " + Rooms.isMore() + " cena " +Rooms.getPrice()+ " Kč ");
-        }
+        }}
 
         List<Guest> GuestList = new ArrayList<>();
         GuestList.add((new Guest("Adela Maliková","1990.13.3",true, 1))); // změnil jsem typ konsturktoru

@@ -2,7 +2,45 @@ import java.time.LocalDate;
 
 public class Rezervations {
 
-String Guest;
+    public static int nextID=1;
+int id;
+
+    public static int getNextID() {
+        return nextID;
+    }
+
+    public static void setNextID(int nextID) {
+        Rezervations.nextID = nextID;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Rezervations(int id, String guest, LocalDate dateStart, LocalDate dateEnd, int rooms) {
+        this.id = id;
+        Guest = guest;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+        Rooms = rooms;
+    }
+
+    @Override
+    public String toString() {
+        return "Rezervations{" +
+                "id=" + id +
+                ", Guest='" + Guest + '\'' +
+                ", dateStart=" + dateStart +
+                ", dateEnd=" + dateEnd +
+                ", Rooms=" + Rooms +
+                '}';
+    }
+
+    String Guest;
 LocalDate dateStart;
 LocalDate dateEnd;
 int Rooms;
