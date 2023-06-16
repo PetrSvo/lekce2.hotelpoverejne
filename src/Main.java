@@ -32,7 +32,7 @@ public class Main {
 
         System.out.println(RoomsList);{
         for(Rooms Rooms:RoomsList){
-            System.out.println("číslo pokoje "+ Rooms.getNumber() + " má " + Rooms.getLuzka() + " lužka/lužek " + " balkon " + Rooms.isBalkon() + " výhledna moře na " + Rooms.isMore() + " cena " +Rooms.getPrice()+ " Kč ");
+            System.out.println("číslo pokoje "+ Rooms.getNumber() + " má " + Rooms.getLuzka() + " lužka/lužek " + " balkon " + Rooms.isBalkon() + " výhledna na moře  " + Rooms.isMore() + " cena " +Rooms.getPrice()+ " Kč ");
         }}
 
         List<Guest> GuestList = new ArrayList<>();
