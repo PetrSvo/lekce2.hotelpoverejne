@@ -10,6 +10,8 @@ public class Guest {
     LocalDate datumend;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
 
 
+
+
     public LocalDate getDatumstart() {
         return datumstart;
     }
@@ -71,5 +73,4 @@ public class Guest {
 
     public void setWork(boolean work) {
         this.work = work;
-    }
-}
+    }}

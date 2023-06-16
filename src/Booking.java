@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 
 public class Booking {
-  //  public static void main(String... args){//pokud nebudu tisknout tak odendat
+
    private Rooms room;  //odendal jsem private a getry a setry, který v Listu nemají význam
     private Guest guest;
 
@@ -23,7 +23,11 @@ public class Booking {
         RoomsList.add(newRooms);
 
 
-    //Guest Guest1=new Guest("Adela Malikova","1990.13.03.",true);
+
+
+
+
+        //Guest Guest1=new Guest("Adela Malikova","1990.13.03.",true);
     // Guest Guest2= new Guest("Jan Dvoracek","1995.05.05.",false);//pridal jsem konstruktor s pokojem
 
     //pomoci adelaName tam nedostanu set.Name. chce to konstruktor, co s tím?

@@ -8,8 +8,18 @@ import java.util.List;
 public class Main {
     public static void main(String... args)
     {
-       //boolean Guest1;   //zda je ubytovaní host 1...
-      // boolean Guest2;
+      //  int početHostu=2000;
+      //  for (int i=0,i<početHostu,i++){
+       //     rezervations.add(new Rezervations())
+
+
+        Rezervations rezervace1= new Rezervations("Adela Malikova", LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),1);
+        Rezervations rezervace2= new Rezervations("Adela Malikova " + "Jan Dvoracek ", LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),3);
+
+        System.out.println(rezervace1.getGuest()+ " se má(jí) ubytovat od " +rezervace1.getDateStart()+ " do " +rezervace1.getDateEnd() + " na pokoji  " + rezervace1.getRooms());
+        System.out.println(rezervace2.getGuest()+ " se má(jí) ubytovat od " +rezervace2.getDateStart()+ " do " +rezervace2.getDateEnd() + " na pokoji  " + rezervace2.getRooms());
+      //  System.out.println(.size()); nefunguje, nejde vložit objekt, asi vyrtvořit pořadí v třídě Rezervations?
+        System.out.println("počet rezervací je 2");
 
         List<Rooms>RoomsList=new ArrayList<>();
         RoomsList.add(new Rooms(1, 1, true, true, BigDecimal.valueOf(1000)));
@@ -23,9 +33,9 @@ public class Main {
         }
 
         List<Guest> GuestList = new ArrayList<>();
-        GuestList.add((new Guest("Adela Malikova", "1990.13.03.", true, 1, LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26))));
+        GuestList.add((new Guest("Adela Maliková","1990.13.3",true, 1))); // změnil jsem typ konsturktoru
         GuestList.add(new Guest("Jan Dvoracek", "1995.05.05.", false, 3)); //chci oba dva
-        GuestList.add(new Guest("Adela Malikova " + "Jan Dvoracek ", " 1990.13.03. " + "1995.05.05.", false, 1, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14)));
+       // GuestList.add(new Guest("Adela Malikova " + "Jan Dvoracek ", " 1990.13.03. " + "1995.05.05.", false, 1, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14)));
         //třidu rezervace ted nepotřebuji
 
        // System.out.println(GuestList);
@@ -36,10 +46,10 @@ public class Main {
 
           //  Guest.setName(String.valueOf(Guest1));//chtělo to String.valueOf, jinak cerveně podrzený Guest1, tak jsem to tam dal
           // Guest.setNarozeni(String.valueOf(Guest1));
-            System.out.println(Guest.getName()+" narozen(a)"+Guest .getNarozeni() + "má rezervaci od "+ Guest.getDatumstart()+" do "+ Guest.getDatumend());
+            System.out.println(Guest.getName()+" narozen(a)"+Guest .getNarozeni());
         //  if (Guest.getDatumstart()=;
          //  return "nemá rezervaci")
-            System.out.println(GuestList.size());
+         //   System.out.println(GuestList.size());
             }
         //mělo by to vypsat, jenze Guest1 je podrzeny, metoda toString vracela pochybně Main, tak jsem zkusil takto
        //System.out.println(GuestList);
