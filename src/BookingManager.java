@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Rezervations {
+public class BookingManager {
 
     public static int nextID=1;
 int id;
@@ -10,7 +10,7 @@ int id;
     }
 
     public static void setNextID(int nextID) {
-        Rezervations.nextID = nextID;
+        BookingManager.nextID = nextID;
     }
 
     public int getId() {
@@ -21,7 +21,7 @@ int id;
         this.id = id;
     }
 
-    public Rezervations(int id, String guest, LocalDate dateStart, LocalDate dateEnd, int rooms) {
+    public BookingManager(int id, String guest, LocalDate dateStart, LocalDate dateEnd, int rooms) {
         this.id = id;
         Guest = guest;
         this.dateStart = dateStart;
@@ -31,7 +31,7 @@ int id;
 
     @Override
     public String toString() {
-        return "Rezervations{" +
+        return "BookingManager{" +
                 "id=" + id +
                 ", Guest='" + Guest + '\'' +
                 ", dateStart=" + dateStart +
@@ -77,7 +77,7 @@ int Rooms;
         Rooms = rooms;
     }
 
-    public Rezervations(String guest, LocalDate dateStart, LocalDate dateEnd, int rooms) {
+    public BookingManager(String guest, LocalDate dateStart, LocalDate dateEnd, int rooms) {
         Guest = guest;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
