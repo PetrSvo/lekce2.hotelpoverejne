@@ -2,16 +2,16 @@ import java.math.BigDecimal;
 
 public class Rooms {
     int number;
-    int luzka;
+    int beeds;
     boolean balkon;
-     boolean more;
+     boolean sea;
     BigDecimal price; //puvodně jsem měl BigDecimal, asi je to tady možná prozatim zbytecny, tak jsem zkusil double v konstruktoru v třidě Booking nechtělo Bigdecimal prijmout
 
-    public Rooms(int number, int luzka, boolean balkon, boolean more, BigDecimal price) {
+    public Rooms(int number, int beeds, boolean balkon, boolean sea, BigDecimal price) {
         this.number = number;
-        this.luzka = luzka;
+        this.beeds = beeds;
         this.balkon = balkon;
-        this.more = more;
+        this.sea = sea;
         this.price = price;
     }
 
@@ -25,12 +25,12 @@ public class Rooms {
         this.number = number;
     }
 
-    public int getLuzka() {
-        return luzka;
+    public int getBeeds() {
+        return beeds;
     }
 
-    public void setLuzka(int luzka) {
-        this.luzka = luzka;
+    public void setBeeds(int beeds) {
+        this.beeds = beeds;
     }
 
     public boolean isBalkon() {
@@ -41,12 +41,12 @@ public class Rooms {
         this.balkon = balkon;
     }
 
-    public boolean isMore() {
-        return more;
+    public boolean isSea() {
+        return sea;
     }
 
-    public void setMore(boolean more) {
-        this.more = more;
+    public void setSea(boolean sea) {
+        this.sea = sea;
     }
 
     public BigDecimal getPrice() {

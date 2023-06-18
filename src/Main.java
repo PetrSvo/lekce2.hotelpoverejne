@@ -6,23 +6,34 @@ import java.util.List;
 
 
 public class Main {
-    public static void main(String... args)
-    {
+    public static void main(String... args){
 
+        {
 
        List<BookingManager> bookingManagerList =new ArrayList<>();
 
+       bookingManagerList.add(new BookingManager(1,"Karel Dvorák",LocalDate.of(1990,5,15),LocalDate.of(2023,6,1),LocalDate.of(2023,6,7),3,1,true));
+       bookingManagerList.add(new BookingManager(2,"Karel Dvorák",LocalDate.of(1979,3,1),LocalDate.of(2023,8,18),LocalDate.of(2023,8,21),2,1,false));
+       bookingManagerList.add
 
-        bookingManagerList.add(new BookingManager(1,"Adela Malikova", LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),1));
-        bookingManagerList.add(new BookingManager(2,"Adela Malikova " + "Jan Dvoracek ", LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),3));
+
+
+
+
+        //bookingManagerList.add(new BookingManager(1,"Adela Malikova", LocalDate.of(2021,7,19),LocalDate.of(2021,7,26),1));
+       // bookingManagerList.add(new BookingManager(2,"Adela Malikova " + "Jan Dvoracek ", LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),3));
         //System.out.println(bookingManagerList);
-        for(BookingManager BookingManager : bookingManagerList)
-            System.out.println(BookingManager.getGuest()+ " se má(jí) ubytovat od " + BookingManager.getDateStart()+ " do " + BookingManager.getDateEnd() + " na pokoji  " + BookingManager.getRooms());
-        System.out.println("Počet rezervaci je "+ bookingManagerList.size());
-      //  System.out.println(rezervace1.getGuest()+ " se má(jí) ubytovat od " +rezervace1.getDateStart()+ " do " +rezervace1.getDateEnd() + " na pokoji  " + rezervace1.getRooms());
-      //  System.out.println(rezervace2.getGuest()+ " se má(jí) ubytovat od " +rezervace2.getDateStart()+ " do " +rezervace2.getDateEnd() + " na pokoji  " + rezervace2.getRooms());
-     //  System.out.println(getId.size()); //nefunguje, nejde vložit objekt, asi vyrtvořit pořadí v třídě Rezervations?
-      //  System.out.println.("počet rezervací je 2");
+
+
+      for(BookingManager BookingManager : bookingManagerList)
+          System.out.println(BookingManager.getGuest()+ " se má(jí) ubytovat od " + BookingManager.getDateStart()+ " do " + BookingManager.getDateEnd() + " na pokoji  " + BookingManager.getRoomsRooms());
+        System.out.println("Počet rezervaci je "+ bookingManagerList.size());}
+
+
+
+
+
+
 
         List<Rooms>RoomsList=new ArrayList<>();
         RoomsList.add(new Rooms(1, 1, true, true, BigDecimal.valueOf(1000)));
@@ -91,4 +102,4 @@ public class Main {
        // System.out.println(new Guest("Adela Malikova","1990.13.03",true));//vytiskne se, ale uplně něco jineho, jde to jinak obejit?
 
 
-    
+
