@@ -2,52 +2,52 @@ import java.time.LocalDate;
 
 public class Guest {
     String name;
-    String narozeni;//string protože, konstruktor v třídě Booking chtěl text, asi by lepe slo Local.Date.of
+    String born;//string protože, konstruktor v třídě Booking chtěl text, asi by lepe slo Local.Date.of
 
     boolean work;
     //int Room; prozatim pryč, dle doporuceni
-    LocalDate datumstart;
-    LocalDate datumend;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
+    LocalDate datestart;
+    LocalDate dateend;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
 
 
 
 
-    public LocalDate getDatumstart() {
-        return datumstart;
+    public LocalDate getDatestart() {
+        return datestart;
     }
 
-    public void setDatumstart(LocalDate datumstart) {
-        this.datumstart = datumstart;
+    public void setDatestart(LocalDate datestart) {
+        this.datestart = datestart;
     }
 
-    public LocalDate getDatumend() {
-        return datumend;
+    public LocalDate getDateend() {
+        return dateend;
     }
 
-    public void setDatumend(LocalDate datumend) {
-        this.datumend = datumend;
+    public void setDateend(LocalDate dateend) {
+        this.dateend = dateend;
     }
 
-    public Guest(String name, String narozeni, boolean work, int room, LocalDate datumstart, LocalDate datumend) {
+    public Guest(String name, String born, boolean work, int room, LocalDate datestart, LocalDate dateend) {
         this.name = name;
-        this.narozeni = narozeni;
+        this.born = born;
         this.work = work;
        // Room = room;
-        this.datumstart = datumstart;
-        this.datumend = datumend;
+        this.datestart = datestart;
+        this.dateend = dateend;
     }
 
 
-    public Guest(String name, String narozeni, boolean work, int room) {
+    public Guest(String name, String born, boolean work, int room) {
         this.name = name;
-        this.narozeni = narozeni;
+        this.born = born;
         this.work = work;
       //  Room = room;
     }
 
-    public Guest(String name, String narozeni, boolean work) {
+    public Guest(String name, String born, boolean work) {
         this.name = name;
-        this.narozeni = narozeni;
+        this.born = born;
         this.work = work;
     }
 
@@ -59,12 +59,12 @@ public class Guest {
         this.name = name;
     }
 
-    public String getNarozeni() {
-        return narozeni;
+    public String getBorn() {
+        return born;
     }
 
-    public void setNarozeni(String narozeni) {
-        this.narozeni = narozeni;
+    public void setBorn(String born) {
+        this.born = born;
     }
 
     public boolean isWork() {

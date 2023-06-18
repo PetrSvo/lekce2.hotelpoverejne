@@ -1,9 +1,16 @@
 import java.time.LocalDate;
 
 public class BookingManager {
+    public void add(Booking newBooking) {
+
+    }
 
     public static int nextID=1;
-int id;
+    int id;
+    String Guest;
+    LocalDate dateStart;
+    LocalDate dateEnd;
+    int Rooms;
 
     public static int getNextID() {
         return nextID;
@@ -40,10 +47,7 @@ int id;
                 '}';
     }
 
-    String Guest;
-LocalDate dateStart;
-LocalDate dateEnd;
-int Rooms;
+
 
     public String getGuest() {
         return Guest;

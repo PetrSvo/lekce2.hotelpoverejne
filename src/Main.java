@@ -33,7 +33,7 @@ public class Main {
       //  System.out.println(RoomsList);
         {
         for(Rooms Rooms:RoomsList){
-            System.out.println("číslo pokoje "+ Rooms.getNumber() + " má " + Rooms.getLuzka() + " lužka/lužek " + " balkon " + Rooms.isBalkon() + " výhledna na moře  " + Rooms.isMore() + " cena " +Rooms.getPrice()+ " Kč ");
+            System.out.println("číslo pokoje "+ Rooms.getNumber() + " má " + Rooms.getBeeds() + " lužka/lužek " + " balkon " + Rooms.isBalkon() + " výhledna na moře  " + Rooms.isSea() + " cena " +Rooms.getPrice()+ " Kč ");
         }}
 
         List<Guest> GuestList = new ArrayList<>();
@@ -50,7 +50,7 @@ public class Main {
 
           //  Guest.setName(String.valueOf(Guest1));//chtělo to String.valueOf, jinak cerveně podrzený Guest1, tak jsem to tam dal
           // Guest.setNarozeni(String.valueOf(Guest1));
-            System.out.println(Guest.getName()+" narozen(a)"+Guest .getNarozeni());
+            System.out.println(Guest.getName()+" narozen(a)"+Guest .getBorn());
         //  if (Guest.getDatumstart()=;
          //  return "nemá rezervaci")
          //   System.out.println(GuestList.size());
