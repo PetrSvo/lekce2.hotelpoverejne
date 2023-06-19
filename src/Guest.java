@@ -6,35 +6,35 @@ public class Guest {
 
     boolean work;
     //int Room; prozatim pryč, dle doporuceni
-    LocalDate datestart;
-    LocalDate dateend;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
+    LocalDate dateStart;
+    LocalDate dateEnd;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
 
 
 
 
-    public LocalDate getDatestart() {
-        return datestart;
+    public LocalDate getDateStart() {
+        return dateStart;
     }
 
-    public void setDatestart(LocalDate datestart) {
-        this.datestart = datestart;
+    public void setDateStart(LocalDate dateStart) {
+        this.dateStart = dateStart;
     }
 
-    public LocalDate getDateend() {
-        return dateend;
+    public LocalDate getDateEnd() {
+        return dateEnd;
     }
 
-    public void setDateend(LocalDate dateend) {
-        this.dateend = dateend;
+    public void setDateEnd(LocalDate dateEnd) {
+        this.dateEnd = dateEnd;
     }
 
-    public Guest(String name, String born, boolean work, int room, LocalDate datestart, LocalDate dateend) {
+    public Guest(String name, String born, boolean work, int room, LocalDate dateStart, LocalDate dateEnd) {
         this.name = name;
         this.born = born;
         this.work = work;
        // Room = room;
-        this.datestart = datestart;
-        this.dateend = dateend;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
     }
 
 
