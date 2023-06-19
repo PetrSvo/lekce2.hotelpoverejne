@@ -1,11 +1,30 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookingManager {
 
 
+    List<Booking> bookingList=new ArrayList<>();
+
+    public void add(Booking newBooking){
+        bookingList.add(newBooking);
+
+
+
+    }
+
+    //zbytek smazat nebo presunout
+
+
+
+
+
+
+
     public static int nextID=1; //zatim si necham, mohlo by pak posloužit pro vypis sumy rezervaci
     int id;
-    String Guest;
+   private String Guest;
     LocalDate bornGuest;
     LocalDate dateStart;
     LocalDate dateEnd;

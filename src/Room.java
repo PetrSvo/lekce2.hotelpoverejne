@@ -1,13 +1,13 @@
 import java.math.BigDecimal;
 
-public class Rooms {
+public class Room {
     int number;
     int beeds;
     boolean balkon;
      boolean sea;
-    BigDecimal price; //puvodně jsem měl BigDecimal, asi je to tady možná prozatim zbytecny, tak jsem zkusil double v konstruktoru v třidě Booking nechtělo Bigdecimal prijmout
+    BigDecimal price;
 
-    public Rooms(int number, int beeds, boolean balkon, boolean sea, BigDecimal price) {
+    public Room(int number, int beeds, boolean balkon, boolean sea, BigDecimal price) {
         this.number = number;
         this.beeds = beeds;
         this.balkon = balkon;

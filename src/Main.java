@@ -11,6 +11,7 @@ public class Main {
         {
             List<BookingManager> bookingManagerList =new ArrayList<>();
 
+
      //  bookingManagerList.add(new BookingManager(1,"Karel Dvorák",LocalDate.of(1990,5,15),LocalDate.of(2023,6,1),LocalDate.of(2023,6,7),3,1,true));
      //  bookingManagerList.add(new BookingManager(2,"Karel Dvorák",LocalDate.of(1979,3,1),LocalDate.of(2023,8,18),LocalDate.of(2023,8,21),2,1,false));
 

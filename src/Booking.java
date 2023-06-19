@@ -1,12 +1,24 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class Booking {
-
-   private Room room;  //odendal jsem private a getry a setry, který v Listu nemají význam
+public static int nextId=1;
+    int id;
+   private Room room;
     private Guest guest;
+    private LocalDate dateStart;
+    private LocalDate dateEnd;
+    private int numberRooms;
+   private int countGuestInRoom;
+   private boolean workingStay;
 
+
+
+
+    List<Guest>otherGuest;
+   List<Room>otherRoom;
 
 
 

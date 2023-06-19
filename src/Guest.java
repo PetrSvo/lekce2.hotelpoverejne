@@ -8,7 +8,13 @@ public class Guest {
     LocalDate dateStart;
     LocalDate dateEnd;
 
+    //měl bych použit tenhle konstruktor, zacatek a konec pobytu bych mohl dat do BookingManager
 
+    public Guest(String name, LocalDate born, boolean work) {
+        this.name = name;
+        this.born = born;
+        this.work = work;
+    }
 
 
     public LocalDate getDateStart() {
@@ -37,12 +43,6 @@ public class Guest {
 
 
     public Guest(String name, LocalDate born, boolean work, int room) {
-        this.name = name;
-        this.born = born;
-        this.work = work;
-    }
-
-    public Guest(String name, LocalDate born, boolean work) {
         this.name = name;
         this.born = born;
         this.work = work;
