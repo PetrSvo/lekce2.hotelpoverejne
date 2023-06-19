@@ -9,7 +9,7 @@ public class BookingManager {
     LocalDate bornGuest;
     LocalDate dateStart;
     LocalDate dateEnd;
-    int RoomsRooms;
+    int numberRooms;
     int countGuestInRoom;
     boolean workingStay;
 
@@ -22,13 +22,13 @@ public class BookingManager {
 
 
 
-    public BookingManager(int id, String guest, LocalDate bornGuest, LocalDate dateStart, LocalDate dateEnd, int roomsRooms, int countGuestInRoom, boolean workingStay) {
+    public BookingManager(int id, String guest, LocalDate bornGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
         this.id = id;
         Guest = guest;
         this.bornGuest = bornGuest;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        RoomsRooms = roomsRooms;
+        this.numberRooms = numberRooms;
         this.countGuestInRoom = countGuestInRoom;
         this.workingStay = workingStay;
     }
@@ -42,13 +42,13 @@ public class BookingManager {
         this.rezervationABCRelax = rezervationABCRelax;
     }
 
-    public BookingManager(int id, String guest, LocalDate bornGuest, LocalDate dateStart, LocalDate dateEnd, int roomsRooms, int countGuestInRoom, boolean workingStay, int rezervationABCRelax) {
+    public BookingManager(int id, String guest, LocalDate bornGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay, int rezervationABCRelax) {
         this.id = id;
        Guest = guest;
         this.bornGuest = bornGuest;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        RoomsRooms = roomsRooms;
+        this.numberRooms = numberRooms;
         this.countGuestInRoom = countGuestInRoom;
         this.workingStay = workingStay;
         this.rezervationABCRelax = rezervationABCRelax;
@@ -105,7 +105,7 @@ public class BookingManager {
         Guest = guest;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        RoomsRooms = rooms;
+        numberRooms = rooms;
     }
 
 
@@ -137,18 +137,18 @@ public class BookingManager {
         this.dateEnd = dateEnd;
     }
 
-    public int getRoomsRooms() {
-        return RoomsRooms;
+    public int getNumberRooms() {
+        return numberRooms;
     }
 
-    public void setRoomsRooms(int roomsRooms) {
-        RoomsRooms = roomsRooms;
+    public void setNumberRooms(int numberRooms) {
+        this.numberRooms = numberRooms;
     }
 
-    public BookingManager(String guest, LocalDate dateStart, LocalDate dateEnd, int roomsRooms) {
+    public BookingManager(String guest, LocalDate dateStart, LocalDate dateEnd, int numberRooms) {
         Guest = guest;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        RoomsRooms = roomsRooms;
+        this.numberRooms = numberRooms;
     }
 }

@@ -2,12 +2,11 @@ import java.time.LocalDate;
 
 public class Guest {
     String name;
-    String born;//string protože, konstruktor v třídě Booking chtěl text, asi by lepe slo Local.Date.of
+    LocalDate born;//string protože, konstruktor v třídě Booking chtěl text, asi by lepe slo Local.Date.of
 
     boolean work;
-    //int Room; prozatim pryč, dle doporuceni
     LocalDate dateStart;
-    LocalDate dateEnd;//pridal jsem do konstruktoru nejprve čislo pokoje a pak data pobytu
+    LocalDate dateEnd;
 
 
 
@@ -28,24 +27,22 @@ public class Guest {
         this.dateEnd = dateEnd;
     }
 
-    public Guest(String name, String born, boolean work, int room, LocalDate dateStart, LocalDate dateEnd) {
+    public Guest(String name, LocalDate born, boolean work, int room, LocalDate dateStart, LocalDate dateEnd) {
         this.name = name;
         this.born = born;
         this.work = work;
-       // Room = room;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
     }
 
 
-    public Guest(String name, String born, boolean work, int room) {
+    public Guest(String name, LocalDate born, boolean work, int room) {
         this.name = name;
         this.born = born;
         this.work = work;
-      //  Room = room;
     }
 
-    public Guest(String name, String born, boolean work) {
+    public Guest(String name, LocalDate born, boolean work) {
         this.name = name;
         this.born = born;
         this.work = work;
@@ -59,11 +56,11 @@ public class Guest {
         this.name = name;
     }
 
-    public String getBorn() {
+    public LocalDate getBorn() {
         return born;
     }
 
-    public void setBorn(String born) {
+    public void setBorn(LocalDate born) {
         this.born = born;
     }
 
