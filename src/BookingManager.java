@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,14 +11,24 @@ public class BookingManager {
 
     List<Booking> bookingList=new ArrayList<>();
 
-new Booking()=KarelDvoracek;
+
 
 
     bookingList.add(new Booking(1,LocalDate.of(2200,5,7),LocalDate.of(2200,6,7),1,5,true));
 
 
 
+        List<Guest> GuestList = new ArrayList<>();
 
+
+        GuestList.add(new Guest("Adela Malikova",LocalDate.of(1990,03,13),true,1));
+        GuestList.add(new Guest("Jan Dvoracek",LocalDate.of(1995,05,13),false,3));
+        // GuestList.add(new Guest("Adela Malikova " + "Jan Dvoracek ", " 1990.13.03. " + "1995.05.05.", false, 1, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14)));
+
+        List<Room> roomList =new ArrayList<>();
+        roomList.add(new Room(1, 1, true, true, BigDecimal.valueOf(1000)));
+        roomList.add(new Room(2,1,true,true,BigDecimal.valueOf(1000)));
+        roomList.add(new Room(3,3,false,true,BigDecimal.valueOf(2400)));
 
 
     }
