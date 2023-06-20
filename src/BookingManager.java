@@ -4,21 +4,15 @@ import java.util.List;
 
 public class BookingManager {
 
+    {
+
+
 
     List<Booking> bookingList=new ArrayList<>();
 
-    public void add(Booking newBooking){
-        bookingList.add(newBooking);
 
-        public List<Booking> getBooking(int id, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
-            this.id = id;
-            this.dateStart = dateStart;
-            this.dateEnd = dateEnd;
-            this.numberRooms = numberRooms;
-            this.countGuestInRoom = countGuestInRoom;
-            this.workingStay = workingStay;
-        }
 
+    bookingList.add(new Booking(
 
 
 

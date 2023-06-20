@@ -4,7 +4,10 @@ import java.util.List;
 
 
 public class Booking {
-public static int nextId=1;
+
+
+
+    public static int nextId=1;
     int id;
    private Room room;
     private Guest guest;
@@ -118,6 +121,9 @@ public static int nextId=1;
    List<Room>otherRoom;
 
 
+    List<Booking> BookingList = new ArrayList<>();
+    public void add(Booking newBooking){
+        BookingList.add(newBooking);}
 
     List<Guest> GuestList = new ArrayList<>();
     public void add(Guest newGuest){
