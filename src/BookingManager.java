@@ -14,15 +14,17 @@ public class BookingManager {
 
 
 
-    bookingList.add(new Booking(1,LocalDate.of(2200,5,7),LocalDate.of(2200,6,7),1,5,true));
+
+    bookingList.add(new Booking(1,LocalDate.of(2023,6,1),LocalDate.of(2023,6,7),3,5,true));
+    bookingList.add(new Booking(2,LocalDate.of(2023,8,18),LocalDate.of(2023,8,21),2,2,false));
 
 
 
         List<Guest> GuestList = new ArrayList<>();
 
 
-        GuestList.add(new Guest("Adela Malikova",LocalDate.of(1990,03,13),true,1));
-        GuestList.add(new Guest("Jan Dvoracek",LocalDate.of(1995,05,13),false,3));
+        GuestList.add(new Guest("Karel Dvorak",LocalDate.of(1990,5,15)));
+        GuestList.add(new Guest("Karel Dvorak",LocalDate.of(1979,3,1),false,2));
         // GuestList.add(new Guest("Adela Malikova " + "Jan Dvoracek ", " 1990.13.03. " + "1995.05.05.", false, 1, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14)));
 
         List<Room> roomList =new ArrayList<>();
