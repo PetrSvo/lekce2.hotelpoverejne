@@ -10,9 +10,11 @@ public class BookingManager {
 
     List<Booking> bookingList=new ArrayList<>();
 
+new Booking()=KarelDvoracek;
 
 
-    bookingList.add(new Booking(
+    bookingList.add(new Booking(1,LocalDate.of(2200,5,7),LocalDate.of(2200,6,7),1,5,true));
+
 
 
 
