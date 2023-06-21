@@ -25,11 +25,19 @@ public class BookingManager {
     public void addGuest(Guest newGuest){
         guestList.add(newGuest);}
 
+    public Guest getGuest(String name) {
+        return guestList.get(1);   //chce to číslo, zatim necham, uvidim co udela
+    }
+
+    public ArrayList<Guest>getAllGuest() {
+        return new ArrayList<>(guestList);
+}
+
     List<Room> roomList =new ArrayList<>();
     public void addRoom(Room newRoom){
-        roomList.add(newRoom);
+        roomList.add(newRoom);}
 
+    public ArrayList<Room>getAllRoom(){
+        return new ArrayList<>(roomList); }
+    }
 
-
-
-}}
