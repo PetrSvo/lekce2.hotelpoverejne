@@ -21,10 +21,10 @@ public class Main {
         int limitrezervationABCRelax=30;
 
 
-        // List<Booking> bookingList=new ArrayList<>();
+        BookingManager bookingManager =new BookingManager();
 
 
-      //  bookingList.add(new Booking(1, LocalDate.of(2023,6,1),LocalDate.of(2023,6,7),3,5,true));
+      bookingManager.addBooking(new Booking(1, LocalDate.of(2023,6,1),LocalDate.of(2023,6,7),3,5,true));
        // bookingList.add(new Booking(2,LocalDate.of(2023,8,18),LocalDate.of(2023,8,21),2,2,false));
 
 
