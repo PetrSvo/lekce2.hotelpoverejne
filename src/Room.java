@@ -4,14 +4,14 @@ public class Room {
     int number;
     int beeds;
     boolean balkon;
-     boolean sea;
+     boolean seaView;
     BigDecimal price;
 
-    public Room(int number, int beeds, boolean balkon, boolean sea, BigDecimal price) {
+    public Room(int number, int beeds, boolean balkon, boolean seaView, BigDecimal price) {
         this.number = number;
         this.beeds = beeds;
         this.balkon = balkon;
-        this.sea = sea;
+        this.seaView = seaView;
         this.price = price;
     }
 
@@ -41,12 +41,12 @@ public class Room {
         this.balkon = balkon;
     }
 
-    public boolean isSea() {
-        return sea;
+    public boolean isSeaView() {
+        return seaView;
     }
 
-    public void setSea(boolean sea) {
-        this.sea = sea;
+    public void setSeaView(boolean seaView) {
+        this.seaView = seaView;
     }
 
     public BigDecimal getPrice() {

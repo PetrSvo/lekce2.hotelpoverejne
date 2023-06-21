@@ -5,190 +5,31 @@ import java.util.List;
 
 public class BookingManager {
 
-    {
 
+    List<Booking> bookingList = new ArrayList<>();
+    public void addBooking(Booking newBooking){
+        bookingList.add(newBooking);}
 
-
-    List<Booking> bookingList=new ArrayList<>();
-
-
-
-
-
-    bookingList.add(new Booking(1,LocalDate.of(2023,6,1),LocalDate.of(2023,6,7),3,5,true));
-    bookingList.add(new Booking(2,LocalDate.of(2023,8,18),LocalDate.of(2023,8,21),2,2,false));
-
-
-
-        List<Guest> GuestList = new ArrayList<>();
-
-
-        GuestList.add(new Guest("Karel Dvorak",LocalDate.of(1990,5,15)));
-        GuestList.add(new Guest("Karel Dvorak",LocalDate.of(1979,3,1),false,2));
-        // GuestList.add(new Guest("Adela Malikova " + "Jan Dvoracek ", " 1990.13.03. " + "1995.05.05.", false, 1, LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14)));
-
-        List<Room> roomList =new ArrayList<>();
-        roomList.add(new Room(1, 1, true, true, BigDecimal.valueOf(1000)));
-        roomList.add(new Room(2,1,true,true,BigDecimal.valueOf(1000)));
-        roomList.add(new Room(3,3,false,true,BigDecimal.valueOf(2400)));
-
-
+    public Booking getBooking(int id) {//zkusil jsem si místo index zadat id
+        return bookingList.get(id);
     }
 
-    //zbytek smazat nebo presunout
-
-
-
-
-
-
-
-    public static int nextID=1; //zatim si necham, mohlo by pak posloužit pro vypis sumy rezervaci
-    int id;
-   private String Guest;
-    LocalDate bornGuest;
-    LocalDate dateStart;
-    LocalDate dateEnd;
-    int numberRooms;
-    int countGuestInRoom;
-    boolean workingStay;
-
-    int rezervationABCRelax;{
-        for(int i = 1; i<=30;i++);}
-
-
-
-
-
-
-
-    public BookingManager(int id, String guest, LocalDate bornGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
-        this.id = id;
-        Guest = guest;
-        this.bornGuest = bornGuest;
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
-        this.numberRooms = numberRooms;
-        this.countGuestInRoom = countGuestInRoom;
-        this.workingStay = workingStay;
-    }
-
-
-    public int getRezervationABCRelax() {
-        return rezervationABCRelax;
-    }
-
-    public void setRezervationABCRelax(int rezervationABCRelax) {
-        this.rezervationABCRelax = rezervationABCRelax;
-    }
-
-    public BookingManager(int id, String guest, LocalDate bornGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay, int rezervationABCRelax) {
-        this.id = id;
-       Guest = guest;
-        this.bornGuest = bornGuest;
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
-        this.numberRooms = numberRooms;
-        this.countGuestInRoom = countGuestInRoom;
-        this.workingStay = workingStay;
-        this.rezervationABCRelax = rezervationABCRelax;
-    }
-
-    // if(i<30)return =+1;
-   // return rezervationABCRelax
-    //    for(int i=1,i<=limitrezervationABCRelax,i++);{
-     //       rezervationABCRelax +1;}
-
-    int limitrezervationABCRelax=30;
-
-
-
-
-
-
-
-
-    public LocalDate getBornGuest() {
-        return bornGuest;
-    }
-
-    public void setBornGuest(LocalDate bornGuest) {
-        this.bornGuest = bornGuest;
-    }
-
-    public int getCountGuestInRoom() {
-        return countGuestInRoom;
-    }
-
-    public void setCountGuestInRoom(int countGuestInRoom) {
-        this.countGuestInRoom = countGuestInRoom;
-    }
-
-    public static int getNextID() {
-        return nextID;
-    }
-
-    public static void setNextID(int nextID) {
-        BookingManager.nextID = nextID;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public BookingManager(int id, String guest, LocalDate dateStart, LocalDate dateEnd, int rooms) {
-        this.id = id;
-        Guest = guest;
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
-        numberRooms = rooms;
+    public ArrayList<Booking>getAllBooking() {
+     return new ArrayList<>(bookingList);
     }
 
 
 
 
+    List<Guest> guestList = new ArrayList<>();
+    public void addGuest(Guest newGuest){
+        guestList.add(newGuest);}
+
+    List<Room> roomList =new ArrayList<>();
+    public void addRoom(Room newRoom){
+        roomList.add(newRoom);
 
 
-    public String getGuest() {
-        return Guest;
-    }
 
-    public void setGuest(String guest) {
-        Guest = guest;
-    }
 
-    public LocalDate getDateStart() {
-        return dateStart;
-    }
-
-    public void setDateStart(LocalDate dateStart) {
-        this.dateStart = dateStart;
-    }
-
-    public LocalDate getDateEnd() {
-        return dateEnd;
-    }
-
-    public void setDateEnd(LocalDate dateEnd) {
-        this.dateEnd = dateEnd;
-    }
-
-    public int getNumberRooms() {
-        return numberRooms;
-    }
-
-    public void setNumberRooms(int numberRooms) {
-        this.numberRooms = numberRooms;
-    }
-
-    public BookingManager(String guest, LocalDate dateStart, LocalDate dateEnd, int numberRooms) {
-        Guest = guest;
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
-        this.numberRooms = numberRooms;
-    }
-}
+}}
