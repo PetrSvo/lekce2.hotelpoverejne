@@ -6,6 +6,8 @@ import java.util.List;
 
 
 public class Main {
+
+
     public static void main(String... args){
 
 
@@ -41,28 +43,32 @@ public class Main {
 
 
 
-        bookingManager.addGuest(new Guest("Karel Dvorak",LocalDate.of(1990,5,15)));
+         bookingManager.addGuest(new Guest("Karel Dvorak",LocalDate.of(1990,5,15)));
         bookingManager.addGuest(new Guest("Karel Dvorak",LocalDate.of(1979,3,1)));
 
+        ArrayList<Guest>allGuest=bookingManager.getAllGuest();
+        for(Guest guest:allGuest);{
+            System.out.println(allGuest.size());}
 
-        bookingManager.addRoom(new Room(1, 1, true, true, BigDecimal.valueOf(1000)));
-        bookingManager.addRoom(new Room(2,1,true,true,BigDecimal.valueOf(1000)));
-        bookingManager.addRoom(new Room(3,3,false,true,BigDecimal.valueOf(2400)));
+
+       bookingManager.addRoom(new Room(1, 1, true, true, BigDecimal.valueOf(1000)));
+      bookingManager.addRoom(new Room(2,1,true,true,BigDecimal.valueOf(1000)));
+       bookingManager.addRoom(new Room(3,3,false,true,BigDecimal.valueOf(2400)));
 
 
 
     ArrayList<Booking>allBooking=bookingManager.getAllBooking();
     for(Booking booking :allBooking);{
-      System.out.println("Počet rezervaci je "+  allBooking.size());}
-
-        ArrayList<Guest>allGuest=bookingManager.getAllGuest();
-        for(Guest guest:allGuest);{
-            System.out.println(allGuest.size());
-        }
+            //System.out.println("Počet rezervaci je "+  allBooking.size());
+            System.out.println(booking.getDateStart());}}
 
 
 
-    }}
+
+
+
+
+    }
 
 
 
