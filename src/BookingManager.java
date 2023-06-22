@@ -10,8 +10,8 @@ public class BookingManager {
     public void addBooking(Booking newBooking){
         bookingList.add(newBooking);}
 
-    public Booking getBooking(int id) {//zkusil jsem si místo index zadat id
-        return bookingList.get(id);
+    public Booking getBooking(int index) {//zkusil jsem si místo index zadat id
+        return bookingList.get(index);
     }
 
     public ArrayList<Booking>getAllBooking() {
@@ -24,7 +24,7 @@ public class BookingManager {
         guestList.add(newGuest);}
 
   public Guest getGuest(String name) {
-      return guestList.get(1);   //chce to číslo, zatim necham, uvidim co udela
+      return Guest.getName();   //nevim proc to nechce vzit
       }
 
    public ArrayList<Guest>getAllGuest() {

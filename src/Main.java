@@ -30,17 +30,25 @@ public class Main {
       bookingManager.addBooking(new Booking(1, LocalDate.of(2023,6,1),LocalDate.of(2023,6,7),3,5,true));
        bookingManager.addBooking(new Booking(2,LocalDate.of(2023,8,18),LocalDate.of(2023,8,21),2,2,false));
 
+        for(int i = 1; i<=30;i++){
        //ABCRelax dalsích 30jednodenních pobytů
-       bookingManager.addBooking (new Booking(3,LocalDate.of(2023,6,1),LocalDate.of(2023,6,2),2,1,true));
+       bookingManager.addBooking (new Booking(3,LocalDate.of(2023,6,1),LocalDate.of(2023,6,2),2,1,true));}
 
+        for(int i=1;i<=7;i++){
        //Alena Krasova dalších 7 rezervací po 5 dnech v následujích měsicích
-       bookingManager.addBooking(new Booking(4,LocalDate.of(2023,6,1),LocalDate.of(2023,6,5),1,1,false));
+       bookingManager.addBooking(new Booking(4,LocalDate.of(2023,6,1),LocalDate.of(2023,6,5),1,1,false));}
 
+        for(int i=1;i<=3;i++){
        //ABCRelax další 3 třídenní pobyty od 8.15,21.srpna
-        bookingManager.addBooking(new Booking(5,LocalDate.of(2023,8,1),LocalDate.of(2023,8,4),2,1,true));
+        bookingManager.addBooking(new Booking(5,LocalDate.of(2023,8,1),LocalDate.of(2023,8,4),2,1,true));}
 
 
+        ArrayList<Booking>allBooking=bookingManager.getAllBooking();
+        for(Booking booking :allBooking);{
+            System.out.println("Počet rezervaci je "+  allBooking.size());
 
+        }
+        for(Booking )
 
 
          bookingManager.addGuest(new Guest("Karel Dvorak",LocalDate.of(1990,5,15)));
@@ -49,6 +57,8 @@ public class Main {
         ArrayList<Guest>allGuest=bookingManager.getAllGuest();
         for(Guest guest:allGuest);{
             System.out.println(allGuest.size());}
+        for(Guest guest:allGuest){
+            System.out.println(Guest.getName());}
 
 
        bookingManager.addRoom(new Room(1, 1, true, true, BigDecimal.valueOf(1000)));
@@ -57,10 +67,8 @@ public class Main {
 
 
 
-    ArrayList<Booking>allBooking=bookingManager.getAllBooking();
-    for(Booking booking :allBooking);{
-            //System.out.println("Počet rezervaci je "+  allBooking.size());
-            System.out.println(booking.getDateStart());}}
+
+    }
 
 
 
