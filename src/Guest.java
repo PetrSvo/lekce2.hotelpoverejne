@@ -5,9 +5,9 @@ public class Guest {
    public LocalDate born;
 
     public Guest(String name, LocalDate born) {
-        this.name = name;
-        this.born = born;
-    }
+       this.name = name;
+      this.born = born;
+  }
 
     public String getName() {
         return name;

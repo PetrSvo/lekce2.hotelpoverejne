@@ -53,14 +53,21 @@ public class Main {
 
             ArrayList<Guest>guestList=new ArrayList<>();
         Guest guest1=new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
-        {Guest newGuest = new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
+        bookingManager.addBooking(new Booking(1, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7), 3, 5, true));
+        for(Booking booking: allBooking);{
+            System.out.println(guest1.getName()+" narozen(a) "+guest1.getBorn()+" má rezervaci"+" od "+Booking.getDateStart()+" do "+Booking.getDateEnd()+" na pokoji "+ Booking.getNumberRooms()+" , kde ubytováno bude "+Booking.getCountGuestInRoom()+" hostů pracovně "+ Booking.isWorkingStay());
 
-       for (Guest guest:guestList);{
-            System.out.println(guest1.getName()+"narozen(a)"+guest1.getBorn()+"má rezervaci"); }
 
+        Guest guest2 = new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
+            bookingManager.addBooking(new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false));
             for(Booking booking: allBooking);{
-            System.out.println(Booking addBooking.getDateStart());
-            }
+                System.out.println(guest2.getName()+" narozen(a) "+guest2.getBorn()+" má rezervaci"+" od "+Booking.getDateStart()+" do "+Booking.getDateEnd()+" na pokoji "+ Booking.getNumberRooms()+" , kde ubytováno bude "+Booking.getCountGuestInRoom()+" hostů pracovně "+ Booking.isWorkingStay());
+
+       //         for (Guest guest:guestList);{
+        //    System.out.println(guest1.getName()+" narozen(a) "+guest1.getBorn()+" má rezervaci");
+                }
+
+
 
 
 

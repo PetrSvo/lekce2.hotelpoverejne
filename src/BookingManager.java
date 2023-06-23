@@ -23,9 +23,14 @@ public class BookingManager {
     public void addGuest(Guest newGuest){
         guestList.add(newGuest);}
 
-  public Guest getGuest(String name) {
-      return Guest.getName();   //nevim proc to nechce vzit
-      }
+    public void add(Guest guest){
+        guestList.add(guest);}
+
+    //  public Guest getGuest(String name) {
+     // return Guest.getName();   //nevim proc to nechce vzit
+     // }
+
+
 
    public ArrayList<Guest>getAllGuest() {
        return new ArrayList<>(guestList);
