@@ -1,5 +1,3 @@
-import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,8 +5,10 @@ public class BookingManager {
 
 
     List<Booking> bookingList = new ArrayList<>();
-    public void addBooking(Booking newBooking){
-        bookingList.add(newBooking);}
+    public Booking addBooking(Booking newBooking){
+        bookingList.add(newBooking);
+        return newBooking;
+    }
 
     public Booking getBooking(int index) {//zkusil jsem si místo index zadat id
         return bookingList.get(index);
