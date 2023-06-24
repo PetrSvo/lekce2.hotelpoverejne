@@ -17,6 +17,16 @@ public class Booking {
     private static int countGuestInRoom;
     private static boolean workingStay;
 
+    private static LocalDate OneDay;
+
+    //  public static LocalDate getOneDay() {
+  //      return getDateStart()+DatePlusDays(1);;
+  //  }
+
+    public static void setOneDay(LocalDate oneDay) {
+        OneDay = oneDay;
+    }
+
     public Booking(int id, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
         this.id = id;
         this.dateStart = dateStart;
