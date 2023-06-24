@@ -14,23 +14,9 @@ public class Main {
 
 
 
-        // if(i<30)return =+1;
-        // return rezervationABCRelax
-        //    for(int i=1,i<=limitrezervationABCRelax,i++);{
-        //       rezervationABCRelax +1;}
-
-
-
 
         BookingManager bookingManager = new BookingManager();
 
-        bookingManager.addBooking(new Booking(1, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7), 3, 5, true));
-        bookingManager.addBooking(new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false));
-
-
-        //ABCRelax dalsích 30jednodenních pobytů
-     //   for (int i = 1; i <= 30; i++)
-         //   bookingManager.addBooking(new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true));
 
         for (int i = 1; i <= 7; i++) {
             //Alena Krasova dalších 7 rezervací po 5 dnech v následujích měsicích
@@ -65,8 +51,9 @@ public class Main {
                 //ABCRelax dalsích 30jednodenních pobytů
                 int limitrezervationABCRelax = 30;
                 int rezervationABCRelax;
+                //  LocalDate jedenDen =LocalDatePLusDays(1);
 
-              //  bookingManager.addBooking(new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true));
+               bookingManager.addBooking(new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true));
               //  for (Booking booking : BookingManager) ;
 
                 {
@@ -75,7 +62,7 @@ public class Main {
 
 
                 for(Booking booking: allBooking);{for (int i = 1; i <= 30; i++) ; {bookingManager.addBooking(new Booking(+1,LocalDate.of(2023,6,1),LocalDate.of(2023,6,2),2,1,true));}
-                    System.out.println(guest3.getName()+" zalozena(a) "+guest3.getBorn()+" má rezervaci"+" od "+Booking.getLocalDatePlusDays(LocalDate.getDateStart())+" do "+Booking.getDateEnd()+" na pokoji "+ Booking.getNumberRooms()+" , kde ubytováno bude "+Booking.getCountGuestInRoom()+" hostů pracovně "+ Booking.isWorkingStay());
+                    System.out.println(guest3.getName()+" zalozena(a) "+guest3.getBorn()+" má rezervaci"+" od "+Booking.getDateStart()+DatePlusDays(1)+" do "+Booking.getDateEnd()+" na pokoji "+ Booking.getNumberRooms()+" , kde ubytováno bude "+Booking.getCountGuestInRoom()+" hostů pracovně "+ Booking.isWorkingStay());
                 for(Booking booking: allBooking)
                //  if (int i<int limitrezervationABCRelax)
 
