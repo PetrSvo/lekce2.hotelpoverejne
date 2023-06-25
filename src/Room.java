@@ -7,6 +7,8 @@ public class Room {
      boolean seaView;
     BigDecimal price;
 
+
+
     public Room(int number, int beeds, boolean balkon, boolean seaView, BigDecimal price) {
         this.number = number;
         this.beeds = beeds;
@@ -38,12 +40,11 @@ public class Room {
     }
 
     public void setBalkon(boolean balkon) {
-        this.balkon = balkon;
-    }
+        this.balkon = balkon;}
 
-    public boolean isSeaView() {
-        return seaView;
-    }
+    public boolean isSeaView(){
+
+    return seaView;}
 
     public void setSeaView(boolean seaView) {
         this.seaView = seaView;

@@ -19,6 +19,8 @@ public class Booking {
 
     private static LocalDate OneDay;
 
+
+
     //  public static LocalDate getOneDay() {
   //      return getDateStart()+DatePlusDays(1);;
   //  }

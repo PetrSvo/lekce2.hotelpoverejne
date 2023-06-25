@@ -14,28 +14,39 @@ public class Main {
         BookingManager bookingManager = new BookingManager();
 
 
-        ArrayList<Booking> allBooking = bookingManager.getAllBooking();
+         ArrayList<Booking> allBooking = bookingManager.getAllBooking();
         for (Booking booking : allBooking) ;
-        {
-            System.out.println("Počet rezervaci je " + allBooking.size());}
+        System.out.println("Počet rezervaci je " + allBooking.size());
 
-            ArrayList<Guest>guestList=new ArrayList<>();
+        for (seaView:Booking) {
+            boolean seaView = true;}
+            {System.out.println("Ano");}
+
+
+            Room room1=new Room(1, 1, true, true, BigDecimal.valueOf(1000));
+            Room room2 =(new Room(2,1,true,true,BigDecimal.valueOf(1000)));
+            Room room3=(new Room(3,3,false,true,BigDecimal.valueOf(2400)));
+
             Guest guest1=new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
+            Guest guest2 = new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
+            Guest guest3 = new Guest("Cestovní kancelář ABC Relax", LocalDate.of(2020, 5, 30));
+            Guest guest4 = new Guest("Alena Krasova", LocalDate.of(2002, 5, 30));
+
              bookingManager.addBooking(new Booking(1, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7), 3, 5, true));
              for(Booking booking: allBooking);{
-            System.out.println(guest1.getName()+" narozen(a) "+guest1.getBorn()+" má rezervaci"+" od "+Booking.getDateStart()+" do "+Booking.getDateEnd()+" na pokoji "+ Booking.getNumberRooms()+" , kde ubytováno bude "+Booking.getCountGuestInRoom()+" hostů pracovně "+ Booking.isWorkingStay());
+            System.out.println(guest1.getName()+" narozen(a) "+guest1.getBorn()+" má rezervaci"+" od "+Booking.getDateStart()+" do "+Booking.getDateEnd()+" na pokoji "+ Booking.getNumberRooms()+" , kde ubytováno bude "+Booking.getCountGuestInRoom()+" hostů pracovně "+ Booking.isWorkingStay()+" má lůžek "+room1.getBeeds()+ " s balkonem " +room1.isBalkon()+" výhledem na moře "+room1.isSeaView());
 
 
-            Guest guest2 = new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
+
             bookingManager.addBooking(new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false));
             for(Booking booking: allBooking);{
-                System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od " + Booking.getDateStart() + " do " + Booking.getDateEnd() + " na pokoji " + Booking.getNumberRooms() + " , kde ubytováno bude " + Booking.getCountGuestInRoom() + " hostů pracovně " + Booking.isWorkingStay());
+                System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od " + Booking.getDateStart() + " do " + Booking.getDateEnd() + " na pokoji " + Booking.getNumberRooms() + " , kde ubytováno bude " + Booking.getCountGuestInRoom() + " hostů pracovně " + Booking.isWorkingStay()+" má lůžek "+room2.getBeeds()+ " s balkonem " +room2.isBalkon()+" výhledem na moře "+room2.isSeaView());
 
-                Guest guest3 = new Guest("Cestovní kancelář ABC Relax", LocalDate.of(2020, 5, 30));
-                 //   for (int i = 1; i <= 30; i++){System.out.println(guest3.getName() +" zalozena "+ guest3.getBorn(LocalDate.plusDays(1)) + " má rezervaci" + " od " + Booking.getDateStart() + " do " + Booking.getDateEnd() + " na pokoji " + Booking.getNumberRooms() + " , kde ubytováno bude " + Booking.getCountGuestInRoom() + " hostů pracovně " + Booking.isWorkingStay());;
+
+                   for (int i = 1; i <= 30; i++){System.out.println(guest3.getName() +" zalozena "+ guest3.getBorn(LocalDate.plusDays(1)) + " má rezervaci" + " od " + Booking.getDateStart() + " do " + Booking.getDateEnd() + " na pokoji " + Booking.getNumberRooms() + " , kde ubytováno bude " + Booking.getCountGuestInRoom() + " hostů pracovně " + Booking.isWorkingStay());;
                bookingManager.addBooking(new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true));
 
-               Guest guest4 = new Guest("Alena Krasova", LocalDate.of(2002, 5, 30));
+
                for (int i = 1; i <= 7; i++) {System.out.println(guest4.getName() +" narozena "+ guest4.getBorn() + " má rezervaci" + " od " + Booking.getDateStart() + " do " + Booking.getDateEnd() + " na pokoji " + Booking.getNumberRooms() + " , kde ubytováno bude " + Booking.getCountGuestInRoom() + " hostů pracovně " + Booking.isWorkingStay());;
                             //Alena Krasova dalších 7 rezervací po 5 dnech v následujích měsicích LocalDate.plusMonths()
                    bookingManager.addBooking(new Booking(4, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 5), 1, 1, false));
@@ -46,6 +57,11 @@ public class Main {
                     bookingManager.addBooking(new Booking(5, LocalDate.of(2023, 8, 1), LocalDate.of(2023, 8, 4), 2, 1, true));
 
 
+
+                    ArrayList<Booking> allWorkingStay = bookingManager.getAllBooking();
+                    for (Booking booking : allWorkingStay) ;
+                    {
+                        System.out.println("Počet pracovních pobytů je " + allWorkingStay.size());}
                             }}
 
 
@@ -60,7 +76,7 @@ public class Main {
 
               //  for(Booking booking: allBooking);{for (int i=1; i <= 30; i++) ; {bookingManager.addBooking(new Booking(+1,LocalDate.of(2023,6,1),LocalDate.of(2023,6,2),2,1,true));}
                 //    System.out.println(guest3.getName()+" zalozena(a) "+guest3.getBorn()+" má rezervaci"+" od "+Booking.getDateStart(DatePlusDays(1))+" do "+Booking.getDateEnd()+" na pokoji "+ Booking.getNumberRooms()+" , kde ubytováno bude "+Booking.getCountGuestInRoom()+" hostů pracovně "+ Booking.isWorkingStay());
-                for(Booking booking: allBooking)
+             //   for(Booking booking: allBooking)
                //  if (int i<int limitrezervationABCRelax)
 
                       // {System.out.println(guest3.getName()+" zalozena(a) "{if (int i<=30)}+bookingManager.addBooking(new Booking(+1,LocalDate.of(2020,6,2), LocalDate.ofYearDay(0,1),2,1,true)));
@@ -92,10 +108,7 @@ public class Main {
      //   for(int i=1;i<10;i++){
     //        System.out.println();      //  bookingManager.addGuest(new Guest("Karel Dvorak",LocalDate.of(1979,3,1)));
     //    }
-
-       bookingManager.addRoom(new Room(1, 1, true, true, BigDecimal.valueOf(1000)));
-      bookingManager.addRoom(new Room(2,1,true,true,BigDecimal.valueOf(1000)));
-       bookingManager.addRoom(new Room(3,3,false,true,BigDecimal.valueOf(2400)));}}
+}}
 
 
 
