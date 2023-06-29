@@ -1,8 +1,8 @@
 import java.time.LocalDate;
 
 public class Guest {
-    public String name;
-   public LocalDate born;
+    private String name;
+   private LocalDate born;
 
 
 

@@ -11,13 +11,13 @@ public class Booking {
     int id;
     private Room room;
     private Guest guest;
-    private static LocalDate dateStart;
-    private static LocalDate dateEnd;
-    private static int numberRooms;
-    private static int countGuestInRoom;
-    private static boolean workingStay;
+    private LocalDate dateStart;
+    private LocalDate dateEnd;
+    private int numberRooms;
+    private int countGuestInRoom;
+    private boolean workingStay;
 
-    private static LocalDate OneDay;
+    private LocalDate OneDay;
 
 
 
@@ -25,7 +25,7 @@ public class Booking {
   //      return getDateStart()+DatePlusDays(1);;
   //  }
 
-    public static void setOneDay(LocalDate oneDay) {
+    public void setOneDay(LocalDate oneDay) {
         OneDay = oneDay;
     }
 
@@ -38,6 +38,8 @@ public class Booking {
         this.workingStay = workingStay;
     }
 
+
+
     public static int getNextId() {
         return nextId;
     }
@@ -46,7 +48,7 @@ public class Booking {
         Booking.nextId = nextId;
     }
 
-    public static LocalDate getDateEnd() {return dateEnd;
+    public  LocalDate getDateEnd() {return dateEnd;
     }
 
     public static LocalDate getLocalDatePlusDays() {
@@ -65,7 +67,7 @@ public class Booking {
         this.id = id;
     }
 
-    public static LocalDate getDateStart() {
+    public  LocalDate getDateStart() {
         return dateStart;
     }
 
@@ -77,7 +79,7 @@ public class Booking {
         this.dateEnd = dateEnd;
     }
 
-    public static int getNumberRooms() {
+    public int getNumberRooms() {
         return numberRooms;
     }
 
@@ -85,7 +87,7 @@ public class Booking {
         this.numberRooms = numberRooms;
     }
 
-    public static int getCountGuestInRoom() {
+    public int getCountGuestInRoom() {
         return countGuestInRoom;
     }
 
@@ -93,7 +95,7 @@ public class Booking {
         this.countGuestInRoom = countGuestInRoom;
     }
 
-    public static boolean isWorkingStay() {
+    public boolean isWorkingStay() {
         return workingStay;
     }
 

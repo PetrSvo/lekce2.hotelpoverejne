@@ -1,11 +1,11 @@
 import java.math.BigDecimal;
 
 public class Room {
-    int number;
-    int beeds;
-    boolean balkon;
-     boolean seaView;
-    BigDecimal price;
+   private int number;
+  private  int beeds;
+   private boolean balkon;
+   private  boolean seaView;
+   private BigDecimal price;
 
 
 
@@ -19,42 +19,42 @@ public class Room {
 
 
 
-    public int getNumber() {
+    private int getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    private void setNumber(int number) {
         this.number = number;
     }
 
-    public int getBeeds() {
+    int getBeeds() {
         return beeds;
     }
 
-    public void setBeeds(int beeds) {
+    private void setBeeds(int beeds) {
         this.beeds = beeds;
     }
 
-    public boolean isBalkon() {
+    boolean isBalkon() {
         return balkon;
     }
 
-    public void setBalkon(boolean balkon) {
+    private void setBalkon(boolean balkon) {
         this.balkon = balkon;}
 
-    public boolean isSeaView(){
+    boolean isSeaView(){
 
     return seaView;}
 
-    public void setSeaView(boolean seaView) {
+    private void setSeaView(boolean seaView) {
         this.seaView = seaView;
     }
 
-    public BigDecimal getPrice() {
+    private BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    private void setPrice(BigDecimal price) {
         this.price = price;
     }
 }
