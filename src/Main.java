@@ -43,10 +43,12 @@ public class Main {
             Booking booking3=new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true);
         bookingList.add(booking3);
             for (int i = 1; i<= 30; i++)
-        {bookingList.add((new Booking(""+1,LocalDate.of(2023,6,1+LocalDate.plusDays(1)),LocalDate.of(2023,6,2+LocalDate.plusDays(1)),2,1,true)));
+        {bookingList.add((new Booking(10,LocalDate.now().plusDays(1),LocalDate.now().plusDays(1),2,1,true)));
 
         }
-
+        System.out.println(bookingList.size());
+            for(Booking booking:bookingManager.getAllBooking())
+        System.out.println(bookingManager.bookingList);
       //  LocalDate.plusDays(1)
 
             Booking booking4=new Booking(40, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 5), 1, 1, false);

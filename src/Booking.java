@@ -19,9 +19,10 @@ public class Booking {
 
     private LocalDate OneDay;
 
-
-
-    //  public static LocalDate getOneDay() {
+    public LocalDate getOneDay() {
+        return LocalDate.now().plusDays(1);
+    }
+//  public static LocalDate getOneDay() {
   //      return getDateStart()+DatePlusDays(1);;
   //  }
 
@@ -56,8 +57,20 @@ public class Booking {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id=" + id +
+                ", room=" + room +
+                ", guest=" + guest +
+                ", dateStart=" + dateStart +
+                ", dateEnd=" + dateEnd +
+                ", numberRooms=" + numberRooms +
+                ", countGuestInRoom=" + countGuestInRoom +
+                ", workingStay=" + workingStay +
+                ", OneDay=" + OneDay +
+                '}';
+    }
 
     public int getId() {
         return id;
