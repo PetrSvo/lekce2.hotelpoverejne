@@ -1,5 +1,4 @@
 import java.math.BigDecimal;
-import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,51 +11,58 @@ public class Main {
     public static void main(String... args) {
 
         BookingManager bookingManager = new BookingManager();
+        BookingManager bookingmanager1 = new BookingManager();
 
-
-         ArrayList<Booking> allBooking = bookingManager.getAllBooking();
+        ArrayList<Booking> allBooking = bookingManager.getAllBooking();
         for (Booking booking : allBooking) ;
-        System.out.println("Počet rezervaci je " + allBooking.size());
+      //  System.out.println("Počet rezervaci je " + allBooking.size());
 
         //    for (seaView:Booking booking); {
-         //   boolean seaView = true;}
-          //  {System.out.println("Ano");}
+        //   boolean seaView = true;}
+        //  {System.out.println("Ano");}
 
-        List<Room>roomList=new ArrayList<>();
-            Room room1=new Room(1, 1, true, true, BigDecimal.valueOf(1000));
-            Room room2 =(new Room(2,1,true,true,BigDecimal.valueOf(1000)));
-            Room room3=(new Room(3,3,false,true,BigDecimal.valueOf(2400)));
+        List<Room> roomList = new ArrayList<>();
+        Room room1 = new Room(1, 1, true, true, BigDecimal.valueOf(1000));
+        Room room2 = (new Room(2, 1, true, true, BigDecimal.valueOf(1000)));
+        Room room3 = (new Room(3, 3, false, true, BigDecimal.valueOf(2400)));
 
-            List<Guest>guestList=new ArrayList<>();
-            Guest guest1=new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
-            Guest guest2 = new Guest("Karel Dvorak",LocalDate.of(1990,5,15));
-            Guest guest3 = new Guest("Cestovní kancelář ABC Relax", LocalDate.of(2020, 5, 30));
-            Guest guest4 = new Guest("Alena Krasova", LocalDate.of(2002, 5, 30));
+        List<Guest> guestList = new ArrayList<>();
+        Guest guest1 = new Guest("Karel Dvorak", LocalDate.of(1990, 5, 15));
+        Guest guest2 = new Guest("Karel Dvorak", LocalDate.of(1990, 5, 15));
+        Guest guest3 = new Guest("Cestovní kancelář ABC Relax", LocalDate.of(2020, 5, 30));
+        Guest guest4 = new Guest("Alena Krasova", LocalDate.of(2002, 5, 30));
 
-        List<Booking>bookingList=new ArrayList<>();
-            Booking booking1=new Booking(1, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7), 3, 5, true);
+        List<Booking> bookingList = new ArrayList<>();
+        Booking booking1 = new Booking(1, 3, "Karel Dvorak", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7), 3, 5, true);
         bookingList.add(booking1);
 
-            Booking booking2=new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false);
+        Booking booking2 = new Booking(2, 2, "Karel Dvorak", LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false);
         bookingList.add(booking2);
 
-            Booking booking3=new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true);
+        Booking booking3 = new Booking(3, 2, " CK Abc", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true);
         bookingList.add(booking3);
-            for (int i = 1; i<= 30; i++)
-        {bookingList.add((new Booking(10,LocalDate.now().plusDays(1),LocalDate.now().plusDays(1),2,1,true)));
+        for (int id = 1; id <= 30; id++) {
+            bookingList.add((new Booking(10, 2, "CK Abc", LocalDate.now().plusDays(1), LocalDate.now().plusDays(1), 2, 1, true)));
 
         }
-        System.out.println(bookingList.size());
-            for(Booking booking:bookingManager.getAllBooking())
-        System.out.println(bookingManager.bookingList);
-      //  LocalDate.plusDays(1)
 
-            Booking booking4=new Booking(40, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 5), 1, 1, false);
-       // for (int id = 1; id <= 7; id++)
+        Booking booking4=new Booking(40, 1, "Alena Karasova", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 5), 1, 1, false);
+        bookingList.add(booking4);
+         for (int id = 1; id <= 7; id++){
+             bookingList.add((new Booking(40, 1, "Alena Karasova", LocalDate.now().plusMonths(1), LocalDate.now().plusMonths(1), 1, 1, false)));
+         }
 
-            Booking booking5=new Booking(50, LocalDate.of(2023, 8, 1), LocalDate.of(2023, 8, 4), 2, 1, true);
-        //for (int id = 1; id <= 3; id++)
+            Booking booking5=new Booking(50, 2, " CK Abc", LocalDate.of(2023, 8, 1), LocalDate.of(2023, 8, 4), 2, 1, true);
+        bookingList.add(booking5);
+         for (int id = 1; id <= 3; id++){
+             bookingList.add(new Booking(50,2,"CK Abc",LocalDate.now().plusDays(7),LocalDate.now().plusDays(7),2,1,true));
+         }
 
+
+
+        System.out.println("Počet rezervaci je "+bookingList.size());
+        for (Booking booking : bookingManager.getAllBooking())
+            System.out.println(bookingManager.bookingList);
 
         //   bookingManager.addBooking(new Booking(1, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7), 3, 5, true));
            //  for(Booking booking: allBooking);{
@@ -64,7 +70,7 @@ public class Main {
 
 
 
-         //  bookingManager.addBooking(new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false));
+           //bookingManager.addBooking(new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false));
          //   for(Booking booking: allBooking);{
                 System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od " + booking2.getDateStart() + " do " + booking2.getDateEnd() + " na pokoji " + booking2.getNumberRooms() + " , kde ubytováno bude " + booking2.getCountGuestInRoom() + " hostů pracovně " + booking2.isWorkingStay()+" má lůžek "+room2.getBeeds()+ " s balkonem " +room2.isBalkon()+" výhledem na moře "+room2.isSeaView());
 

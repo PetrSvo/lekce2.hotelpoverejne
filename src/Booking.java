@@ -19,6 +19,8 @@ public class Booking {
 
     private LocalDate OneDay;
 
+    private List<Guest>otherGuest=new ArrayList<>();
+
     public LocalDate getOneDay() {
         return LocalDate.now().plusDays(1);
     }
@@ -30,7 +32,7 @@ public class Booking {
         OneDay = oneDay;
     }
 
-    public Booking(int id, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
+    public Booking(int id, int i, String abc, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
         this.id = id;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
@@ -39,7 +41,18 @@ public class Booking {
         this.workingStay = workingStay;
     }
 
+    public Booking(int id, Room room, Guest guest,List<Guest>otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
+        this.id = id;
+        this.room = room;
+        this.guest = guest;
+        this.otherGuest = otherGuest;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+        this.numberRooms = numberRooms;
+        this.countGuestInRoom = countGuestInRoom;
+        this.workingStay = workingStay;
 
+    }
 
     public static int getNextId() {
         return nextId;
