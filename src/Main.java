@@ -15,7 +15,7 @@ public class Main {
 
         ArrayList<Booking> allBooking = bookingManager.getAllBooking();
         for (Booking booking : allBooking) ;
-      //  System.out.println("Počet rezervaci je " + allBooking.size());
+        //  System.out.println("Počet rezervaci je " + allBooking.size());
 
         //    for (seaView:Booking booking); {
         //   boolean seaView = true;}
@@ -46,37 +46,39 @@ public class Main {
 
         }
 
-        Booking booking4=new Booking(40, 1, "Alena Karasova", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 5), 1, 1, false);
+        Booking booking4 = new Booking(40, 1, "Alena Karasova", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 5), 1, 1, false);
         bookingList.add(booking4);
-         for (int id = 1; id <= 7; id++){
-             bookingList.add((new Booking(40, 1, "Alena Karasova", LocalDate.now().plusMonths(1), LocalDate.now().plusMonths(1), 1, 1, false)));
-         }
+        for (int id = 1; id <= 7; id++) {
+            bookingList.add((new Booking(40, 1, "Alena Karasova", LocalDate.now().plusMonths(1), LocalDate.now().plusMonths(1), 1, 1, false)));
+        }
 
-            Booking booking5=new Booking(50, 2, " CK Abc", LocalDate.of(2023, 8, 1), LocalDate.of(2023, 8, 4), 2, 1, true);
+        Booking booking5 = new Booking(50, 2, " CK Abc", LocalDate.of(2023, 8, 1), LocalDate.of(2023, 8, 4), 2, 1, true);
         bookingList.add(booking5);
-         for (int id = 1; id <= 3; id++){
-             bookingList.add(new Booking(50,2,"CK Abc",LocalDate.now().plusDays(7),LocalDate.now().plusDays(7),2,1,true));
-         }
+        for (int id = 1; id <= 3; id++) {
+            bookingList.add(new Booking(50, 2, "CK Abc", LocalDate.now().plusDays(7), LocalDate.now().plusDays(7), 2, 1, true));
+        }
 
 
-
-        System.out.println("Počet rezervaci je "+bookingList.size());
+        System.out.println("Počet rezervaci je " + bookingList.size());
         for (Booking booking : bookingManager.getAllBooking())
             System.out.println(bookingManager.bookingList);
 
         //   bookingManager.addBooking(new Booking(1, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 7), 3, 5, true));
-           //  for(Booking booking: allBooking);{
-            System.out.println(guest1.getName()+" narozen(a) "+guest1.getBorn()+" má rezervaci"+" od "+booking1.getDateStart()+" do "+booking1.getDateEnd()+" na pokoji "+ booking1.getNumberRooms()+" , kde ubytováno bude "+booking1.getCountGuestInRoom()+" hostů pracovně "+ booking1.isWorkingStay()+" má lůžek "+room1.getBeeds()+ " s balkonem " +room1.isBalkon()+" výhledem na moře "+room1.isSeaView());
+        //  for(Booking booking: allBooking);{
+        System.out.println(booking1.getOtherGuest() + " narozen(a) " + guest1.getBorn() + " má rezervaci" + " od " + booking1.getDateStart() + " do " + booking1.getDateEnd() + " na pokoji " + booking1.getNumberRooms() + " , kde ubytováno bude " + booking1.getCountGuestInRoom() + " hostů pracovně " + booking1.isWorkingStay() + " má lůžek " + room1.getBeeds() + " s balkonem " + room1.isBalkon() + " výhledem na moře " + room1.isSeaView());
 
 
+        //bookingManager.addBooking(new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false));
+        //   for(Booking booking: allBooking);{
+        System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od " + booking2.getDateStart() + " do " + booking2.getDateEnd() + " na pokoji " + booking2.getNumberRooms() + " , kde ubytováno bude " + booking2.getCountGuestInRoom() + " hostů pracovně " + booking2.isWorkingStay() + " má lůžek " + room2.getBeeds() + " s balkonem " + room2.isBalkon() + " výhledem na moře " + room2.isSeaView());
 
-           //bookingManager.addBooking(new Booking(2, LocalDate.of(2023, 8, 18), LocalDate.of(2023, 8, 21), 2, 2, false));
-         //   for(Booking booking: allBooking);{
-                System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od " + booking2.getDateStart() + " do " + booking2.getDateEnd() + " na pokoji " + booking2.getNumberRooms() + " , kde ubytováno bude " + booking2.getCountGuestInRoom() + " hostů pracovně " + booking2.isWorkingStay()+" má lůžek "+room2.getBeeds()+ " s balkonem " +room2.isBalkon()+" výhledem na moře "+room2.isSeaView());
 
-
-                  System.out.println(guest3.getName() +" zalozena "+ guest3.getBorn() + " má rezervaci" + " od " + booking3.getDateStart() + " do " + booking3.getDateEnd() + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getCountGuestInRoom() + " hostů pracovně " + booking3.isWorkingStay());;
-                //    bookingManager.addBooking(new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true));
+        System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking3.getDateStart() + " do " + booking3.getDateEnd() + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getCountGuestInRoom() + " hostů pracovně " + booking3.isWorkingStay());
+        ;
+        for (Booking booking : bookingList) {
+            System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + LocalDate.now().plusDays(1) + " do " + LocalDate.now().plusDays(1) + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getCountGuestInRoom() + " hostů pracovně " + booking3.isWorkingStay());
+            ;}
+                //  bookingManager.addBooking(new Booking(3, LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true));
 
 
                 System.out.println(guest4.getName() +" narozena "+ guest4.getBorn() + " má rezervaci" + " od " + booking4.getDateStart() + " do " + booking4.getDateEnd() + " na pokoji " + booking4.getNumberRooms() + " , kde ubytováno bude " + booking4.getCountGuestInRoom() + " hostů pracovně " + booking4.isWorkingStay());;
