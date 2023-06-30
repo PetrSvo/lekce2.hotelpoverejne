@@ -21,6 +21,22 @@ public class Booking {
 
     private List<Guest>otherGuest=new ArrayList<>();
 
+    public String getGuest() {
+        return guest.getName();
+    }
+
+    public void setGuest(Guest guest) {
+        this.guest = guest;
+    }
+
+    public List<Guest> getOtherGuest() {
+        return otherGuest;
+    }
+
+    public void setOtherGuest(List<Guest> otherGuest) {
+        this.otherGuest = otherGuest;
+    }
+
     public LocalDate getOneDay() {
         return LocalDate.now().plusDays(1);
     }

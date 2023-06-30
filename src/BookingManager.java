@@ -27,9 +27,9 @@ public class BookingManager {
     public void add(Guest guest){
         guestList.add(guest);}
 
-    //  public Guest getGuest(String name) {
-     // return Guest.getName();   //nevim proc to nechce vzit
-     // }
+    // public Guest getGuest(String name) {
+   //  return Guest.getName();   //nevim proc to nechce vzit
+   //   }
 
 
 
