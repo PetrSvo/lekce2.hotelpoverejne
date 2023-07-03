@@ -11,13 +11,23 @@ public class BookingManager {
         return newBooking;
     }
 
-    public Booking getBooking(int index) {//zkusil jsem si místo index zadat id
-        return bookingList.get(index);
-    }
+    //přidání další rezervace
+    public Booking getBooking(int id) {//zkusil jsem si místo index zadat id
+        return bookingList.get(id);
+    } //dal by se použit index
+
+    //Vypis všech rezervaci
 
     public ArrayList<Booking>getAllBooking() {
      return new ArrayList<>(bookingList);
     }
+
+    // Mazani rezervace
+    public Booking clearBooking(int id) {
+        return bookingList.get(id);}
+
+
+    public int size(BookingManager BookingList) {return BookingList.size(BookingList);} //zkouska vypsat rezervace jinak nez z ArrayListu
 
 
     List<Guest> guestList = new ArrayList<>();

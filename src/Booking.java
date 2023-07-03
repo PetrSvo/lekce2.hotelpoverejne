@@ -14,7 +14,7 @@ public class Booking {
     private LocalDate dateStart;
     private LocalDate dateEnd;
     private int numberRooms;
-    private int countGuestInRoom;
+    private int numberOfGuests;
     private boolean workingStay;
 
     private LocalDate OneDay;
@@ -37,9 +37,14 @@ public class Booking {
         this.otherGuest = otherGuest;
     }
 
-    public LocalDate getOneDay() {
-        return LocalDate.now().plusDays(1);
+    public LocalDate getOneDay() {for (int id = 1; id <= 30; id++)
+        return getDateStart().plusDays(1);
+       return getOneDay().plusDays(1);
     }
+
+    //LocalDate Oneday=LocalDate.getDateStart.plusDays();
+
+
 //  public static LocalDate getOneDay() {
   //      return getDateStart()+DatePlusDays(1);;
   //  }
@@ -48,24 +53,29 @@ public class Booking {
         OneDay = oneDay;
     }
 
-    public Booking(int id, int i, String abc, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
+
+   // Metoda pro vracení počtu hostu na pokoji
+    public  List<Guest> add(Booking getNumberOfGuests){ return getNumberOfGuests.getOtherGuest();}
+
+
+    public Booking(int id, int i, String abc, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
         this.id = id;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
         this.numberRooms = numberRooms;
-        this.countGuestInRoom = countGuestInRoom;
+        this.numberOfGuests = numberOfGuests;
         this.workingStay = workingStay;
     }
 
-    public Booking(int id, Room room, Guest guest,List<Guest>otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int countGuestInRoom, boolean workingStay) {
+    public Booking(int id, Room room, Guest guest, List<Guest>otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
         this.id = id;
         this.room = room;
         this.guest = guest;
         this.otherGuest = otherGuest;
-        this.dateStart = dateStart;
+        this.dateStart = getOneDay();
         this.dateEnd = dateEnd;
         this.numberRooms = numberRooms;
-        this.countGuestInRoom = countGuestInRoom;
+        this.numberOfGuests = numberOfGuests;
         this.workingStay = workingStay;
 
     }
@@ -95,7 +105,7 @@ public class Booking {
                 ", dateStart=" + dateStart +
                 ", dateEnd=" + dateEnd +
                 ", numberRooms=" + numberRooms +
-                ", countGuestInRoom=" + countGuestInRoom +
+                ", countGuestInRoom=" + numberOfGuests +
                 ", workingStay=" + workingStay +
                 ", OneDay=" + OneDay +
                 '}';
@@ -129,12 +139,12 @@ public class Booking {
         this.numberRooms = numberRooms;
     }
 
-    public int getCountGuestInRoom() {
-        return countGuestInRoom;
+    public int getNumberOfGuests() {
+        return numberOfGuests;
     }
 
-    public void setCountGuestInRoom(int countGuestInRoom) {
-        this.countGuestInRoom = countGuestInRoom;
+    public void setNumberOfGuests(int numberOfGuests) {
+        this.numberOfGuests = numberOfGuests;
     }
 
     public boolean isWorkingStay() {
