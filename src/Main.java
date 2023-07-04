@@ -79,10 +79,13 @@ public class Main {
 
         System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od " + booking2.getDateStart() + " do " + booking2.getDateEnd() + " na pokoji " + booking2.getNumberRooms() + " , kde ubytováno bude " + booking2.getNumberOfGuests() + " hostů pracovně " + booking2.isWorkingStay() + " má lůžek " + room2.getBeeds() + " s balkonem " + room2.isBalkon() + " výhledem na moře " + room2.isSeaView());
 
+        System.out.println("Pocet hostu na pokoji je "+booking3.getNumberOfGuests());
 
-        for (Booking booking : bookingList)
-              {  Booking clearBooking(1)};
+        // for (Booking clearBooking : bookingList)
 
+                System.out.println(BookingManager.getClearBooking(10));
+
+        System.out.println(BookingManager.getNumberOfWorkingsBookings());
 
         //    System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking3.getDateStart() + " do " + booking3.getDateEnd() + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getCountGuestInRoom() + " hostů pracovně " + booking3.isWorkingStay());
         ;

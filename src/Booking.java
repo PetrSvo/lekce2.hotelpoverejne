@@ -55,7 +55,8 @@ public class Booking {
 
 
    // Metoda pro vracení počtu hostu na pokoji
-    public  List<Guest> add(Booking getNumberOfGuests){ return getNumberOfGuests.getOtherGuest();}
+    public  List<Guest> add(Booking getNumberOfGuests)
+    { return getNumberOfGuests.getOtherGuest();}
 
 
     public Booking(int id, int i, String abc, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
