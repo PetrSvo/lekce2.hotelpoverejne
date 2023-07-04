@@ -41,6 +41,10 @@ public class Main {
         {
             bookingList.add((new Booking(3, 2, "CK Abc", LocalDate.of(2023, 6, 1).plusDays(1), LocalDate.of(2023, 6, 2).plusDays(1), 2, 1, true)));
 
+
+            for (id = 2; id <= 30; id++)
+            {bookingList.add(booking3.getDateStart().plusDays(1);
+            return booking3.getDateStart();};
             System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking3.getOneDay().plusDays(1) + " do " + booking3.getDateEnd().plusDays(1) + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getNumberOfGuests() + " hostů pracovně " + booking3.isWorkingStay());
         }
 
