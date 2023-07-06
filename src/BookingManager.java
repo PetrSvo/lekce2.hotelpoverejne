@@ -11,8 +11,8 @@ public class BookingManager {
     }
 
     //přidání další rezervace
-    public Booking getBooking(int id) {//zkusil jsem si místo index zadat id
-        return bookingList.get(id);
+    public Booking getBooking(int index) {//zkusil jsem si místo index zadat id
+        return bookingList.get(index);
     } //dal by se použit index
 
     //Vypis všech rezervaci
@@ -24,7 +24,7 @@ public class BookingManager {
 
 
     // Mazani rezervace
-    public static ArrayList<BookingManager> getClearBooking(int id)
+    public static ArrayList<BookingManager> getClearBooking(int index)
     {return new ArrayList<BookingManager>();}
 
 
@@ -45,8 +45,8 @@ public class BookingManager {
 
       }
 
-          return Booking.getNextId();
-      }
+      return Booking.getNextIndex();
+               }
 
 
       //Pruměrný počet hostů na rezervaci
@@ -54,7 +54,7 @@ public class BookingManager {
         List<Booking>averageGuests=new ArrayList<>();
         for (Booking booking:bookingList)
         {
-            System.out.println((bookingList.getNumberOfGuests())/bookingList.size());
+       //     System.out.println((bookingList.getNumberOfGuests())/bookingList.size());
         }
     return null;  }
 

@@ -34,18 +34,27 @@ public class Main {
         // LocalDate today=LocalDate.of(2023,6,1)+LocalDate.plusDays(1);
 
         Booking booking3 = new Booking(3, 2, " CK Abc", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true);
-        bookingList.add(booking3);
-        for (int id = 1; id <= 30; id++)
-        //  for (LocalDate.of(2023,6,1).plusDays=1,LocalDate.of(2023,6,1).plusDays<30,LocalDate.of(2023,6,1)plusDays++)
-        ////LocalDate.(LocalDate.of(2023,6,1)+LocalDate.plusDays(1))
-        {
-            bookingList.add((new Booking(3, 2, "CK Abc", LocalDate.of(2023, 6, 1).plusDays(1), LocalDate.of(2023, 6, 2).plusDays(1), 2, 1, true)));
 
 
-            for (id = 2; id <= 30; id++)
-            {bookingList.add(booking3.getDateStart().plusDays(1);
-            return booking3.getDateStart();};
-            System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking3.getOneDay().plusDays(1) + " do " + booking3.getDateEnd().plusDays(1) + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getNumberOfGuests() + " hostů pracovně " + booking3.isWorkingStay());
+        for (int i = 1; i <= 30; i++) {
+
+            //       // LocalDate StartRezervation.plusDays(booking3.getIndex())= LocaDate EndRezervation ;
+            //  for (LocalDate.of(2023,6,1).plusDays=1,LocalDate.of(2023,6,1).plusDays<30,LocalDate.of(2023,6,1)plusDays++)
+            ////LocalDate.(LocalDate.of(2023,6,1)+LocalDate.plusDays(1))
+
+
+            LocalDate endDateRezervation = LocalDate.of(2020, 6, booking3.getIndex()).plusDays(booking3.getIndex());
+
+            LocalDate startDateRezervation = LocalDate.of(2020, 6, booking3.getIndex());
+
+
+                bookingList.add((new Booking(3, 2, "CK Abc",LocalDate.of(2020,6, booking3.getIndex()),LocalDate.of(2020,6,booking3.getIndex()).plusDays(booking3.getIndex()), 2, 1, true)));
+
+
+       //     for (i = 2; i <= 30; i++)
+         //   {bookingList.add(booking3.getDateStart().plusDays(1);
+        //    return booking3.getDateStart();};
+            System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking3.getStartDateRezervation() + " do " + booking3.getEndDateRezervation() + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getNumberOfGuests() + " hostů pracovně " + booking3.isWorkingStay());
         }
 
 
