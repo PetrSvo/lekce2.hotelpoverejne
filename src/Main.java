@@ -33,22 +33,24 @@ public class Main {
         //LocalDate.of(2023,6,1)+LocalDate.plusDays(1)= new LocalDate;
         // LocalDate today=LocalDate.of(2023,6,1)+LocalDate.plusDays(1);
 
-        Booking booking3 = new Booking(3, 2, " CK Abc", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true);
+        Booking booking3 = new Booking(1, 2, " CK Abc", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 2), 2, 1, true);
 
 
-        for (int i = 1; i <= 30; i++) {
+        for (int index = 1; index <= 30; index++) {
 
             //       // LocalDate StartRezervation.plusDays(booking3.getIndex())= LocaDate EndRezervation ;
             //  for (LocalDate.of(2023,6,1).plusDays=1,LocalDate.of(2023,6,1).plusDays<30,LocalDate.of(2023,6,1)plusDays++)
             ////LocalDate.(LocalDate.of(2023,6,1)+LocalDate.plusDays(1))
+    for(Booking booking:bookingList.getEndDateRezervation()) {
+    new bookingList.getEndDateRezervation() = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
+    LocalDate getStartDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex());
+}
+            //  LocalDate setEndDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
+
+         //   LocalDate setStartDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex());
 
 
-            LocalDate endDateRezervation = LocalDate.of(2020, 6, booking3.getIndex()).plusDays(booking3.getIndex());
-
-            LocalDate startDateRezervation = LocalDate.of(2020, 6, booking3.getIndex());
-
-
-                bookingList.add((new Booking(3, 2, "CK Abc",LocalDate.of(2020,6, booking3.getIndex()),LocalDate.of(2020,6,booking3.getIndex()).plusDays(booking3.getIndex()), 2, 1, true)));
+                bookingList.add((new Booking(1, 2, "CK Abc",LocalDate.of(2020,6, booking3.getNextIndex()),LocalDate.of(2020,6,booking3.getNextIndex()).plusDays(booking3.getNextIndex()), 2, 1, true)));
 
 
        //     for (i = 2; i <= 30; i++)
