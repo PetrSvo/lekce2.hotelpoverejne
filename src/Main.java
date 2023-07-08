@@ -34,7 +34,7 @@ public class Main {
         // LocalDate today=LocalDate.of(2023,6,1)+LocalDate.plusDays(1);
         for (int index = 1; index <= 30; index++) {
 
-        Booking booking3 = new Booking(1, 2, " CK Abc", LocalDate.of(2023, 6, booking3.getNextIndex()), LocalDate.of(2023, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex()), 2, 1, true);
+        Booking booking3 = new Booking(1, 2, " CK Abc", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6,2) ,2, 1, true);
        bookingList.add(booking3);
 
 
@@ -42,9 +42,9 @@ public class Main {
             //  for (LocalDate.of(2023,6,1).plusDays=1,LocalDate.of(2023,6,1).plusDays<30,LocalDate.of(2023,6,1)plusDays++)
             ////LocalDate.(LocalDate.of(2023,6,1)+LocalDate.plusDays(1))
             //for(Booking booking:bookingList.endDateRezervation()) {
-     new endDateRezervation() = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
-      new startDateRezervation()= LocalDate.of(2020, 6, booking3.getNextIndex());
-
+ //   new endDateRezervation() = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
+  //  new startDateRezervation()= LocalDate.of(2020, 6, booking3.getNextIndex());
+//vratit booking3 u booking nad
             //  LocalDate setEndDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
 
          //   LocalDate setStartDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex());
@@ -93,11 +93,12 @@ public class Main {
 
         System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od " + booking2.getDateStart() + " do " + booking2.getDateEnd() + " na pokoji " + booking2.getNumberRooms() + " , kde ubytováno bude " + booking2.getNumberOfGuests() + " hostů pracovně " + booking2.isWorkingStay() + " má lůžek " + room2.getBeeds() + " s balkonem " + room2.isBalkon() + " výhledem na moře " + room2.isSeaView());
 
-        System.out.println("Pocet hostu na pokoji je "+booking3.getNumberOfGuests());
+        System.out.println("Pocet hostu na pokoji je "+booking2.getNumberOfGuests());
 
         // for (Booking clearBooking : bookingList)
 
                 System.out.println(BookingManager.getClearBooking(10));
+
 
         System.out.println(BookingManager.getNumberOfWorkingsBookings());
 

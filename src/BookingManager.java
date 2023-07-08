@@ -37,11 +37,11 @@ public class BookingManager {
       for(Booking booking:bookingList)
       {if (booking.isWorkingStay())
       {
-          System.out.println("Pracovní pobyty "+booking.isWorkingStay());}
+          System.out.println("Pracovní pobyty "+bookingList.size());}
 
-      else{ if(!booking.isWorkingStay())
+     // else{ if(!booking.isWorkingStay())
 
-      {System.out.println("Dovolená"+!booking.isWorkingStay()); }}
+   //   {System.out.println("Dovolená"+!booking.isWorkingStay()); }}
 
       }
 
@@ -54,7 +54,7 @@ public class BookingManager {
         List<Booking>averageGuests=new ArrayList<>();
         for (Booking booking:bookingList)
         {
-       //     System.out.println((bookingList.getNumberOfGuests())/bookingList.size());
+           System.out.println((booking.getNumberOfGuests())/bookingList.size());
         }
     return null;  }
 

@@ -93,8 +93,8 @@ public class Booking {
         this.room = room;
         this.guest = guest;
         this.otherGuest = otherGuest;
-        this.startDateRezervation = startDateRezervation;
-        this.endDateRezervation = endDateRezervation;
+        this.startDateRezervation = LocalDate.of(2020, 6, Booking.getNextIndex()).plusDays(Booking.getNextIndex());;
+        this.endDateRezervation = LocalDate.of(2020, 6,Booking.getNextIndex());
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
         this.workingStay = workingStay;
@@ -114,7 +114,7 @@ public class Booking {
         this.room = room;
         this.guest = guest;
         this.otherGuest = otherGuest;
-        this.dateStart = getOneDay();
+        this.dateStart = dateStart;
         this.dateEnd = dateEnd;
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
