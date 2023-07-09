@@ -34,30 +34,32 @@ public class Main {
         // LocalDate today=LocalDate.of(2023,6,1)+LocalDate.plusDays(1);
         for (int index = 1; index <= 30; index++) {
 
-        Booking booking3 = new Booking(1, 2, " CK Abc", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6,2) ,2, 1, true);
-       bookingList.add(booking3);
+            Booking booking3 = new Booking(1, 2, " CK Abc", LocalDate.of(2023, 6, Booking.getNextIndex()), LocalDate.of(2023, 6, Booking.getNextIndex()).plusDays(Booking.getNextIndex()), 2, 1, true);
+            bookingList.add(booking3);
 
 
             //       // LocalDate StartRezervation.plusDays(booking3.getIndex())= LocaDate EndRezervation ;
             //  for (LocalDate.of(2023,6,1).plusDays=1,LocalDate.of(2023,6,1).plusDays<30,LocalDate.of(2023,6,1)plusDays++)
             ////LocalDate.(LocalDate.of(2023,6,1)+LocalDate.plusDays(1))
             //for(Booking booking:bookingList.endDateRezervation()) {
- //   new endDateRezervation() = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
-  //  new startDateRezervation()= LocalDate.of(2020, 6, booking3.getNextIndex());
+            //   new endDateRezervation() = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
+            //  new startDateRezervation()= LocalDate.of(2020, 6, booking3.getNextIndex());
 //vratit booking3 u booking nad
             //  LocalDate setEndDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex()).plusDays(booking3.getNextIndex());
 
-         //   LocalDate setStartDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex());
+            //   LocalDate setStartDateRezervation = LocalDate.of(2020, 6, booking3.getNextIndex());
 
 
-                bookingList.add((new Booking(1, 2, "CK Abc",LocalDate.of(2020,6, booking3.getNextIndex()),LocalDate.of(2020,6, booking3.getNextIndex()).plusDays(booking3.getNextIndex()), 2, 1, true)));
+            bookingList.add((new Booking(1, 2, "CK Abc", LocalDate.of(2020, 6, Booking.getNextIndex()), LocalDate.of(2020, 6, Booking.getNextIndex()).plusDays(Booking.getNextIndex()), 2, 1, true)));
 
 
-       //     for (i = 2; i <= 30; i++)
+             for (index = 1; index <= 30; index++){
          //   {bookingList.add(booking3.getDateStart().plusDays(1);
         //    return booking3.getDateStart();};
-            System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking3.getStartDateRezervation() + " do " + booking3.getEndDateRezervation() + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getNumberOfGuests() + " hostů pracovně " + booking3.isWorkingStay());
-        }
+                 //  for(Booking booking: bookingList){
+            System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking.getStartDateRezervation() + " do " + booking3.getEndDateRezervation() + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getNumberOfGuests() + " hostů pracovně " + booking3.isWorkingStay());
+        }}
+        //  }}
 
 
         Booking booking4 = new Booking(1, 1, "Alena Karasova", LocalDate.of(2023, 6, 1), LocalDate.of(2023, 6, 5), 1, 1, false);
