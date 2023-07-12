@@ -18,6 +18,9 @@ public class Booking {
     private LocalDate startDateRezervation;
     private LocalDate endDateRezervation;
 
+    public Booking(int i, String guest, LocalDate startDateRezervation, LocalDate endDateRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
+    }
+
 
     public static void setNextIndex(int nextIndex) {
         Booking.nextIndex = nextIndex;
@@ -80,9 +83,8 @@ public class Booking {
     { return getNumberOfGuests.getOtherGuest();}
 
 
-    public Booking(int index, int i,Room room, Guest guest, List<Guest>otherGuest, LocalDate startDateRezervation, LocalDate endDateRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
+    public Booking(int index, Guest guest, List<Guest>otherGuest, LocalDate startDateRezervation, LocalDate endDateRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
         this.index = index;
-        this.room = room;
         this.guest = guest;
         this.otherGuest = otherGuest;
         this.startDateRezervation = startDateRezervation;
@@ -92,26 +94,7 @@ public class Booking {
         this.workingStay = workingStay;
     }
 
-    // public Booking(int index, int i,Room room, Guest guest, List<Guest>otherGuest, LocalDate startDateRezervation, LocalDate endDateRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
-    //    this.index = index;
-     //   this.room = room;
-      //  this.guest = guest;
-     //   this.otherGuest = otherGuest;
-     //   this.startDateRezervation = LocalDate.of(2020, 6, Booking.getNextIndex()).plusDays(Booking.getNextIndex());;
-     //   this.endDateRezervation = LocalDate.of(2020, 6,Booking.getNextIndex());
-    //    this.numberRooms = numberRooms;
-     //   this.numberOfGuests = numberOfGuests;
-     //   this.workingStay = workingStay;
-//    }
-
-    public Booking(int index, int i, String abc, LocalDate dateStartRezervation, LocalDate dateEndRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
-        this.index = index;
-        this.dateStart = dateStartRezervation;
-        this.dateEnd = dateEndRezervation;
-        this.numberRooms = numberRooms;
-        this.numberOfGuests = numberOfGuests;
-        this.workingStay = workingStay;
-    }
+   
 
     public Booking(int index, Room room, Guest guest, List<Guest>otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
         this.index = index;
@@ -126,6 +109,26 @@ public class Booking {
 
     }
 
+
+     public Booking(int index, int i,Room room, Guest guest, List<Guest>otherGuest, LocalDate startDateRezervation, LocalDate endDateRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
+      this.index = index;
+       this.room = room;
+     this.guest = guest;
+      this.otherGuest = otherGuest;
+      this.startDateRezervation = LocalDate.of(2020, 6, Booking.getNextIndex()).plusDays(Booking.getNextIndex());;
+      this.endDateRezervation = LocalDate.of(2020, 6,Booking.getNextIndex());
+       this.numberRooms = numberRooms;
+      this.numberOfGuests = numberOfGuests;
+      this.workingStay = workingStay;
+ }
+    public Booking(int index, int i, String abc, LocalDate dateStartRezervation, LocalDate dateEndRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
+       this.index = index;
+       this.dateStart = dateStartRezervation;
+     this.dateEnd = dateEndRezervation;
+     this.numberRooms = numberRooms;
+    this.numberOfGuests = numberOfGuests;
+     this.workingStay = workingStay;
+    }
     public static int getNextIndex() {
         return nextIndex;
     }
