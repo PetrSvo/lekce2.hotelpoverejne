@@ -87,14 +87,14 @@ public class Booking {
         this.index = index;
         this.guest = guest;
         this.otherGuest = otherGuest;
-        this.startDateRezervation = startDateRezervation;
+        this.startDateRezervation =startDateRezervation;
         this.endDateRezervation = endDateRezervation;
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
         this.workingStay = workingStay;
     }
 
-   
+
 
     public Booking(int index, Room room, Guest guest, List<Guest>otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
         this.index = index;
@@ -110,17 +110,7 @@ public class Booking {
     }
 
 
-     public Booking(int index, int i,Room room, Guest guest, List<Guest>otherGuest, LocalDate startDateRezervation, LocalDate endDateRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
-      this.index = index;
-       this.room = room;
-     this.guest = guest;
-      this.otherGuest = otherGuest;
-      this.startDateRezervation = LocalDate.of(2020, 6, Booking.getNextIndex()).plusDays(Booking.getNextIndex());;
-      this.endDateRezervation = LocalDate.of(2020, 6,Booking.getNextIndex());
-       this.numberRooms = numberRooms;
-      this.numberOfGuests = numberOfGuests;
-      this.workingStay = workingStay;
- }
+
     public Booking(int index, int i, String abc, LocalDate dateStartRezervation, LocalDate dateEndRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
        this.index = index;
        this.dateStart = dateStartRezervation;
@@ -144,19 +134,21 @@ public class Booking {
         return getLocalDatePlusDays();
     }
 
-
     @Override
     public String toString() {
         return "Booking{" +
-                "id=" + index +
+                "index=" + index +
                 ", room=" + room +
                 ", guest=" + guest +
                 ", dateStart=" + dateStart +
                 ", dateEnd=" + dateEnd +
                 ", numberRooms=" + numberRooms +
-                ", countGuestInRoom=" + numberOfGuests +
+                ", numberOfGuests=" + numberOfGuests +
                 ", workingStay=" + workingStay +
+                ", startDateRezervation=" + startDateRezervation +
+                ", endDateRezervation=" + endDateRezervation +
                 ", OneDay=" + OneDay +
+                ", otherGuest=" + otherGuest +
                 '}';
     }
 
