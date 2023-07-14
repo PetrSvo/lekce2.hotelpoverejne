@@ -33,20 +33,24 @@ public void add(Booking newBooking){
 
 
     // Mazani rezervace
-    public static ArrayList<Booking> getClearBooking(int index)
-    {return new ArrayList<Booking>();}
+    public ArrayList<Booking> getClearBooking(int index) {
+        return getClearBooking(index);
+    }
 
-
-    public int size(BookingManager bookingList) {return bookingList.size(bookingList);} //zkouska vypsat rezervace jinak nez z ArrayListu
+    // Mazani rezervace
+   // public ArrayList<Booking> getClearBooking(int index)
+    //   {return new ArrayList<Booking>(index);}
 
 
     //Metoda pro pracovní pobyty
       public static int getNumberOfWorkingsBookings() {
+        int numberOfWorkingsBookings=0;
       List<String> result = new ArrayList<>();
       for(Booking booking:bookingList)
-      {if (booking.isWorkingStay())
-      {
-          System.out.println("Pracovní pobyty "+bookingList.size());}
+      {if (!booking.isWorkingStay())
+      { numberOfWorkingsBookings++;
+          // System.out.println("Pracovní pobyty "+bookingList.isWorkingStay.size());
+          }
 
      // else{ if(!booking.isWorkingStay())
 
@@ -54,7 +58,7 @@ public void add(Booking newBooking){
 
       }
 
-      return Booking.getNextIndex();
+      return numberOfWorkingsBookings;
                }
 
 
