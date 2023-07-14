@@ -87,13 +87,15 @@ public class Main {
         }
 
         System.out.println("Počet rezervaci je " + bookingList.size());
+
+
         for (Booking booking : bookingList)
             if (booking.isWorkingStay()) {
-                System.out.println("Pracovní pobyt");
+                System.out.println(bookingList.get(booking.getIndex())+" je pracovní pobyt");
             }
-        for (Booking booking : bookingList)
-            if (!booking.isWorkingStay()) {
-                System.out.println("Dovolena");
+
+            else if (!booking.isWorkingStay()) {
+                System.out.println("je dovolena");
             }
 
         System.out.println(guest1.getName() + " narozen(a) " + guest1.getBorn()

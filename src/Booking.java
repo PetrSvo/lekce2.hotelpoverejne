@@ -69,16 +69,9 @@ public class Booking {
         this.otherGuest = otherGuest;
     }
 
-    public LocalDate getOneDay() {for (int id = 1; id <= 30; id++)
-        return getDateStart().plusDays(1);
-       return getOneDay().plusDays(1);
-    }
 
 
 
-    public void setOneDay(LocalDate oneDay) {
-        OneDay = oneDay;
-    }
 
 
    // Metoda pro vracení počtu hostu na pokoji
@@ -126,9 +119,6 @@ public class Booking {
     public  LocalDate getDateEnd() {return dateEnd;
     }
 
-    public static LocalDate getLocalDatePlusDays() {
-        return getLocalDatePlusDays();
-    }
 
     @Override
     public String toString() {
