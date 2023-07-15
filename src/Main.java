@@ -34,6 +34,20 @@ public class Main {
         bookingList.add(booking2);
 
 
+        System.out.println(guest1.getName() + " narozen(a) " + guest1.getBorn()
+                + " má rezervaci" + " od " + booking1.getDateStart() + " do " + booking1.getDateEnd()
+                + " na pokoji " + booking1.getNumberRooms() + " , kde ubytováno bude " + booking1.getNumberOfGuests()
+                + " hostů pracovně " + booking1.isWorkingStay() + " má lůžek " + room1.getBeeds() + " s balkonem "
+                + room1.isBalkon() + " výhledem na moře " + room1.isSeaView());
+
+
+        System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od "
+                + booking2.getDateStart() + " do " + booking2.getDateEnd() + " na pokoji "
+                + booking2.getNumberRooms() + " , kde ubytováno bude " + booking2.getNumberOfGuests()
+                + " hostů pracovně " + booking2.isWorkingStay() + " má lůžek " + room2.getBeeds()
+                + " s balkonem " + room2.isBalkon() + " výhledem na moře " + room2.isSeaView());
+
+
         for (int den = 1; den <= 29; den++) {
             Booking booking3 = new Booking(3, 2, "CK Abc", " CK Abc",
                     LocalDate.of(2023, 6, den),
@@ -85,11 +99,11 @@ public class Main {
                     + " hostů pracovně " + booking5.isWorkingStay());
 
         }
-
+         //Vypis pocet rezervaci -pro getNumberOfBooking
         System.out.println("Počet rezervaci je " + bookingList.size());
 
 
-
+          //Vypis pro pracovni pobyty
         for (Booking booking : bookingList)
             if (booking.isWorkingStay()) {
                 System.out.println(bookingList.get(booking.getNumberRooms()) + " je pracovní pobyt");
@@ -97,19 +111,8 @@ public class Main {
                 System.out.println("je dovolena");
             }
 
-        System.out.println(guest1.getName() + " narozen(a) " + guest1.getBorn()
-                + " má rezervaci" + " od " + booking1.getDateStart() + " do " + booking1.getDateEnd()
-                + " na pokoji " + booking1.getNumberRooms() + " , kde ubytováno bude " + booking1.getNumberOfGuests()
-                + " hostů pracovně " + booking1.isWorkingStay() + " má lůžek " + room1.getBeeds() + " s balkonem "
-                + room1.isBalkon() + " výhledem na moře " + room1.isSeaView());
 
-
-        System.out.println(guest2.getName() + " narozen(a) " + guest2.getBorn() + " má rezervaci" + " od "
-                + booking2.getDateStart() + " do " + booking2.getDateEnd() + " na pokoji "
-                + booking2.getNumberRooms() + " , kde ubytováno bude " + booking2.getNumberOfGuests()
-                + " hostů pracovně " + booking2.isWorkingStay() + " má lůžek " + room2.getBeeds()
-                + " s balkonem " + room2.isBalkon() + " výhledem na moře " + room2.isSeaView());
-
+        //Vypis pro počet hostu na pokoji dane rezervace - dát asi něco jineho před "je"
         System.out.println("Pocet hostu na pokoji rezervace " + booking1.getIndex() + " je " + booking1.getNumberOfGuests());
         System.out.println("Pocet hostu na pokoji rezervace " + booking2.getIndex() + " je " + booking2.getNumberOfGuests());
         for (Booking booking3 : bookingList)
@@ -124,33 +127,33 @@ public class Main {
         { System.out.println("Pocet hostu na pokoji rezervace "+booking5.getIndex() +" je "+ booking5.getNumberOfGuests());
         }
 
-
-      //  for(Booking booking3:bookingList){
-     //   booking3.getClearBooking(1);
-     //  System.out.println(booking3.getClearBooking(1));}
-
-
-
-        System.out.println(BookingManager.getNumberOfWorkingsBookings());
-        for (Booking getNumberOfWorkingsBookings:bookingList){
-        System.out.println(BookingManager.getNumberOfWorkingsBookings());}
-      //  for(Booking booking3:bookingList){
-      //      System.out.println(bookingList.getNumberOfWorkingBookings());
-     //   }
-
-        //    System.out.println(guest3.getName() + " zalozena " + guest3.getBorn() + " má rezervaci" + " od " + booking3.getDateStart() + " do " + booking3.getDateEnd() + " na pokoji " + booking3.getNumberRooms() + " , kde ubytováno bude " + booking3.getCountGuestInRoom() + " hostů pracovně " + booking3.isWorkingStay());
+    //Vypis pro mazani rezervace - nevim jak metodu a vypis smazani přesně napsat, nefunguje
+      for(Booking booking:bookingList){
+    clearBooking(1);
+    System.out.println(clearBooking(1));}
 
 
-        //    System.out.println(guest4.getName() +" narozena "+ guest4.getBorn() + " má rezervaci" + " od " + booking4.getDateStart() + " do " + booking4.getDateEnd() + " na pokoji " + booking4.getNumberRooms() + " , kde ubytováno bude " + booking4.getCountGuestInRoom() + " hostů pracovně " + booking4.isWorkingStay());;
-        //Alena Krasova dalších 7 rezervací po 5 dnech v následujích měsicích LocalDate.plusMonths()
+     //Vypis pracovních pobytů
+       for (Booking booking:bookingList) {System.out.println(bookingList.getNumberOfWorkingsBookings());}
+       for(Booking booking3:bookingList){
+            System.out.println(booking3.getNumberOfWorkingBookings());
+        }
 
-        //ABCRelax další 3 třídenní pobyty od 8.15,21.srpna
-        //   {System.out.println(guest3.getName() +" zalozena "+ guest3.getBorn() + " má rezervaci" + " od " + booking5.getDateStart() + " do " + booking5.getDateEnd() + " na pokoji " + booking5.getNumberRooms() + " , kde ubytováno bude " + booking5.getCountGuestInRoom() + " hostů pracovně " + booking5.isWorkingStay());;
 
-        //    ArrayList<Booking> allWorkingStay = bookingList.getAllWorkingStay();
-        //   for (Booking booking : getAllWorkingStay) {
+        // Vypis prumerný počet hostů na rezervaci - nachapu jaktože BookingManager tam jde dá a bookingList ne?
+        for(Booking booking:bookingList)
+        {
+            System.out.println(bookingList.getAverageGuests);
+        }
 
-        //   System.out.println("Počet pracovních pobytů je " + booking(getAllWorkingStay.size())}
+
+        //Metoda jak zaměnit true a false v pracovních pobytech
+        for (Booking booking : bookingList)
+            if (booking.isWorkingStay()) {
+                System.out.println( "Ano");
+            } else if (!booking.isWorkingStay()) {
+                System.out.println("Ne");
+            }
     }
 }
 

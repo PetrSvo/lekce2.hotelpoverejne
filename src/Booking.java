@@ -20,6 +20,16 @@ public class Booking {
    // public Booking(int index, String i, String guest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
   //  }
 
+    //Metoda Ano/ne pracovní pobyt /nefunguje
+    public boolean workingStay(){
+      if (workingStay==true) {
+        System.out.println( "Ano");}
+     else if (workingStay == false) {
+        System.out.println("Ne");
+    }
+        return false;
+    }
+
 
     public static void setNextIndex(int nextIndex) {
         Booking.nextIndex = nextIndex;

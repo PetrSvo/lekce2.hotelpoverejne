@@ -4,11 +4,10 @@ import java.util.List;
 public class BookingManager {
 
 
-    static List<Booking> bookingList = new ArrayList<>();
-    public Booking addBooking(Booking newBooking){
-        bookingList.add(newBooking);
-        return newBooking;
-    }
+   static List<Booking> bookingList = new ArrayList<>();
+ //   public Booking addBooking(Booking newBooking){
+   //     bookingList.add(newBooking);
+   //     return newBooking;}
 
 
     //přidání další rezervace
@@ -16,8 +15,8 @@ public class BookingManager {
 public void add(Booking newBooking){
         bookingList.add(newBooking);}
 
-        public Booking get(int index){
-            return bookingList.get(index);
+        public Booking get(int nextIndex){
+            return bookingList.get(nextIndex);
     }
 
     //  public List <Booking> bookingList(int index) {
@@ -33,8 +32,13 @@ public void add(Booking newBooking){
 
 
     // Mazani rezervace
-    public ArrayList<Booking> getClearBooking(int index) {
-        return getClearBooking(index);
+      // public ArrayList<Booking> getClearBooking(int index) {
+      //  return getClearBooking(index);}
+    // public ArrayList<Booking> getClearBooking(int index){
+  //  return new ArrayList<Booking>();
+   // }
+    public int clearBooking(int index){
+    return clearBooking(index);
     }
 
     // Mazani rezervace
@@ -43,33 +47,32 @@ public void add(Booking newBooking){
 
 
     //Metoda pro pracovní pobyty
-      public static int getNumberOfWorkingsBookings() {
+      public int getNumberOfWorkingsBookings()
+      {
         int numberOfWorkingsBookings=0;
-      List<String> result = new ArrayList<>();
       for(Booking booking:bookingList)
-      {if (!booking.isWorkingStay())
-      { numberOfWorkingsBookings++;
-          // System.out.println("Pracovní pobyty "+bookingList.isWorkingStay.size());
-          }
-
-     // else{ if(!booking.isWorkingStay())
-
-   //   {System.out.println("Dovolená"+!booking.isWorkingStay()); }}
-
+      {
+          if (!booking.isWorkingStay())
+      {
+          numberOfWorkingsBookings++;
       }
-
+      }
       return numberOfWorkingsBookings;
                }
 
 
       //Pruměrný počet hostů na rezervaci
-      public List<Booking>getAverageGuests() {
-        List<Booking>averageGuests=new ArrayList<>();
-        for (Booking booking:bookingList)
+      public double getAverageGuests() {
+    for (Booking booking:bookingList) {
+    double averageGuests=(booking.getNumberOfGuests())/bookingList.size();
+
         {
-           System.out.println((booking.getNumberOfGuests())/bookingList.size());
-        }
-    return null;  }
+           System.out.println(averageGuests);
+        }}
+    return getAverageGuests();  }
+
+
+
 
     List<Guest> guestList = new ArrayList<>();
     public void addGuest(Guest newGuest){
@@ -77,10 +80,6 @@ public void add(Booking newBooking){
 
     public void add(Guest guest){
         guestList.add(guest);}
-
-    // public Guest getGuest(String name) {
-   //  return Guest.getName();   //nevim proc to nechce vzit
-   //   }
 
 
 
