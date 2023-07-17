@@ -1,5 +1,8 @@
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Booking {
@@ -22,7 +25,7 @@ public class Booking {
 
     //Metoda Ano/ne pracovní pobyt /nefunguje
     public boolean workingStay(){
-      if (workingStay==true) {
+        if (workingStay==true) {
         System.out.println( "Ano");}
      else if (workingStay == false) {
         System.out.println("Ne");
@@ -30,6 +33,22 @@ public class Booking {
         return false;
     }
 
+
+    //  Pokus udelat metodu na pocet noci
+public long getDaysBetween(){
+        for (Booking booking: BookingManager.bookingList) {
+            return booking.daysBetween;
+        } return 0;
+    };
+    long daysBetween = ChronoUnit.DAYS.between(dateStart,dateEnd);
+
+
+    //Pokus o celkovou cenu
+  //  BigDecimal priceTotal=bookinList.getDaysBetween * roomList.getPrice;
+  //  public void getPrice{
+   //     BigDecimal priceTotal=bookinList.getDaysBetween * roomList.getPrice;
+   //     return BookingManager.bookingList.priceTotal;
+ //   }
 
     public static void setNextIndex(int nextIndex) {
         Booking.nextIndex = nextIndex;
@@ -103,8 +122,15 @@ public class Booking {
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
         this.workingStay = workingStay;
+        for (Booking booking: BookingManager.bookingList);
 
+        {if (workingStay==true) {
+            System.out.println( "Ano");}
+        else if (workingStay == false) {
+        System.out.println("Ne");
     }
+
+    }}
 
 
 

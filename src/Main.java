@@ -129,21 +129,22 @@ public class Main {
 
     //Vypis pro mazani rezervace - nevim jak metodu a vypis smazani přesně napsat, nefunguje
       for(Booking booking:bookingList){
-    clearBooking(1);
-    System.out.println(clearBooking(1));}
+  //  clearBooking(1);
+   // System.out.println(clearBooking(1));
+      }
 
 
      //Vypis pracovních pobytů
-       for (Booking booking:bookingList) {System.out.println(bookingList.getNumberOfWorkingsBookings());}
+     //  for (Booking booking:bookingList) {System.out.println(bookingList.getNumberOfWorkingsBookings());}
        for(Booking booking3:bookingList){
-            System.out.println(booking3.getNumberOfWorkingBookings());
+       //     System.out.println(booking3.getNumberOfWorkingBookings());
         }
 
 
         // Vypis prumerný počet hostů na rezervaci - nachapu jaktože BookingManager tam jde dá a bookingList ne?
         for(Booking booking:bookingList)
         {
-            System.out.println(bookingList.getAverageGuests);
+   //       System.out.println(bookingList.getAverageGuests);
         }
 
 

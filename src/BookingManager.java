@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +30,7 @@ public void add(Booking newBooking){
     public ArrayList<Booking>getAllBooking() {
      return new ArrayList<>(bookingList);
     }
-    public int size(){return bookingList.size();} //měla by vypsat vsechny rezervace
+    public static int size(){return bookingList.size();} //měla by vypsat vsechny rezervace
 
 
     // Mazani rezervace
@@ -47,7 +49,7 @@ public void add(Booking newBooking){
 
 
     //Metoda pro pracovní pobyty
-      public int getNumberOfWorkingsBookings()
+      public static int getNumberOfWorkingsBookings()
       {
         int numberOfWorkingsBookings=0;
       for(Booking booking:bookingList)
@@ -62,7 +64,7 @@ public void add(Booking newBooking){
 
 
       //Pruměrný počet hostů na rezervaci
-      public double getAverageGuests() {
+      public static double getAverageGuests() {
     for (Booking booking:bookingList) {
     double averageGuests=(booking.getNumberOfGuests())/bookingList.size();
 
@@ -72,9 +74,25 @@ public void add(Booking newBooking){
     return getAverageGuests();  }
 
 
+//Vypis prvnich 8.pobytů rekreace
+
+    public static List<Booking> getEightWorkingStay (boolean workingStay) {
+        List<Booking> eightWorkingStay = new ArrayList<>();
+        int eightHoliday=0;
+       for (Booking booking:bookingList)
+        if (!booking.isWorkingStay())
+        {
+            int i = eightHoliday++;
+
+        while int i = eightHoliday<=8; };
+        { for(Booking booking:bookingList)
+                System.out.println(bookingList.get(booking.getNumberRooms()));
+
+            } return null;
+        }
 
 
-    List<Guest> guestList = new ArrayList<>();
+    static List<Guest> guestList = new ArrayList<>();
     public void addGuest(Guest newGuest){
         guestList.add(newGuest);}
 
