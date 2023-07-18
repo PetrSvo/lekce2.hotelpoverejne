@@ -84,7 +84,8 @@ public void add(Booking newBooking){
         {
             int i = eightHoliday++;
 
-        while int i = eightHoliday<=8; };
+     //   while int i = eightHoliday<=8;
+            };
         { for(Booking booking:bookingList)
                 System.out.println(bookingList.get(booking.getNumberRooms()));
 

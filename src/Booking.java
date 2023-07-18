@@ -37,10 +37,10 @@ public class Booking {
     //  Pokus udelat metodu na pocet noci
 public long getDaysBetween(){
         for (Booking booking: BookingManager.bookingList) {
-            return booking.daysBetween;
+           // return booking.daysBetween;
         } return 0;
     };
-    long daysBetween = ChronoUnit.DAYS.between(dateStart,dateEnd);
+  //  long daysBetween = ChronoUnit.DAYS.between(dateStart,dateEnd);
 
 
     //Pokus o celkovou cenu
