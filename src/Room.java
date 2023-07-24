@@ -19,42 +19,53 @@ public class Room {
 
 
 
-    private int getNumber() {
+    private int getNumber()
+    {
         return number;
     }
 
-    private void setNumber(int number) {
+    private void setNumber(int number)
+    {
         this.number = number;
     }
 
-    int getBeeds() {
+    int getBeeds()
+    {
         return beeds;
     }
 
-    private void setBeeds(int beeds) {
+    private void setBeeds(int beeds)
+    {
         this.beeds = beeds;
     }
 
-    boolean isBalkon() {
+    boolean isBalkon()
+    {
         return balkon;
     }
 
-    private void setBalkon(boolean balkon) {
-        this.balkon = balkon;}
+    private void setBalkon(boolean balkon)
+    {
+        this.balkon = balkon;
+    }
 
-    boolean isSeaView(){
+    boolean isSeaView()
+    {
+    return seaView;
+    }
 
-    return seaView;}
-
-    private void setSeaView(boolean seaView) {
+    private void setSeaView(boolean seaView)
+    {
         this.seaView = seaView;
     }
 
-    private BigDecimal getPrice() {
+    private BigDecimal getPrice()
+    {
         return price;
     }
 
-    private void setPrice(BigDecimal price) {
+    private void setPrice(BigDecimal price)
+    {
         this.price = price;
     }
 }
