@@ -4,24 +4,12 @@ import java.util.List;
 public class BookingManager {
 
 
-    static List<Booking> bookingList = new ArrayList<>();
+    private static List<Booking> bookingList = new ArrayList<>();
 
-        //Metoda pro vraceni Booking -nefunguje
-      // public static String vypisRezervace(List<Booking> bookingList)
+        //Metoda pro vraceni Bookingmanager v metodách Main
+        public List<Booking>getBooking()
         {
-        for (Booking booking:bookingList)
-             {
-         //   return String.valueOf(booking.getIndex());
-                    String.valueOf(booking.getNumberOfGuests());
-                     booking.getDateStart();
-                     booking.getDateEnd();
-                     booking.getNumberRooms();
-                     booking.getNumberOfGuests();
-                     booking.isWorkingStay();
-             }
-
-
-              //  return null;
+            return new ArrayList<>(bookingList);
         }
 
 
@@ -38,6 +26,10 @@ public class BookingManager {
             return bookingList.get(nextIndex);
          }
 
+        // Mazani jinak nez v tride Booking
+         public void remove(Booking booking){
+            bookingList.remove(booking);
+         }
 
         //Vypis všech rezervaci
 
@@ -58,7 +50,7 @@ public class BookingManager {
      public static double getAverageGuests()
          {
              int totalGuests = 0;
-        for (Booking booking:bookingList)
+        for (Booking booking: bookingList)
             {
             totalGuests += (booking.getNumberOfGuests());
             }
@@ -67,15 +59,14 @@ public class BookingManager {
          }
 
 
-
      //Metoda pro pracovní pobyty
 
-      public int getNumberOfWorkingsBookings()
+      public static int getNumberOfWorkingsBookings ()
         {
          int numberOfWorkingsBookings=0;
              for(Booking booking:bookingList)
             {
-             if (!booking.isWorkingStay())
+             if (booking.isWorkingStay())
                  {
                     numberOfWorkingsBookings++;
                  }
@@ -85,22 +76,34 @@ public class BookingManager {
 
 
 
-    //Vypis prvnich 8.pobytů rekreace
+         //Vypis prvnich 8.pobytů rekreace
 
-         public static List<Booking> getEightWorkingStay (int eigthtHoliday)
+
+         public static List<Booking> getEightWorkingStay ()
         {
-       // int eightHoliday=(i = 0, i <= 8, i++;)
-        List<Booking> eightWorkingStay = new ArrayList<>();
+            List<Booking> eightWorkingStay = new ArrayList<>();
+
+           // int eightHoliday;
+
+            //     for ( eightHoliday = 0; eightHoliday <= 8; eightHoliday=++)
             {
 
-            for (Booking booking : bookingList)
-                if (!booking.isWorkingStay())
-                {
-                        System.out.println(booking.getIndex());
+                    for (Booking booking : bookingList)
+                        if (!booking.isWorkingStay())
+                        {
+                 //          eightHoliday +=(booking.getIndex());
+                        }
+                    {
+                        for (Booking booking : bookingList)
+                            {
+                    //            booking.getIndex()= eightWorkingStay();
+                            }
 
-                }
-          } return null;
+                    }
+            } return  eightWorkingStay;
+
         }
+
 
 
         static List<Guest> guestList = new ArrayList<>();
@@ -119,6 +122,7 @@ public class BookingManager {
          {
        return new ArrayList<>(guestList);
         }
+
 
         List<Room> roomList =new ArrayList<>();
          public void addRoom(Room newRoom)

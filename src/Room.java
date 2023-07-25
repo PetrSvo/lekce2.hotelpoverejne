@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 
 public class Room {
    private int number;
-  private  int beeds;
+   private  int beeds;
    private boolean balkon;
    private  boolean seaView;
    private BigDecimal price;

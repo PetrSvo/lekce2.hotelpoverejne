@@ -23,37 +23,6 @@ public class Booking {
     }
 
 
-
-    //Metoda Ano/ne pracovní pobyt /nefunguje
-    public boolean workingStay(){
-        if (workingStay==true) {
-        System.out.println( "Ano");}
-     else if (workingStay == false) {
-        System.out.println("Ne");
-    }
-        return false;
-    }
-
-
-    //  Pokus udelat metodu na pocet noci
-     public long getDaysBetween()
-    {
-        for (Booking booking: BookingManager.bookingList)
-        {
-           // return booking.daysBetween;
-        } return 0;
-    };
-     //  long daysBetween = ChronoUnit.DAYS.between(dateStart,dateEnd);
-
-
-        //Pokus o celkovou cenu
-        //  BigDecimal priceTotal=bookinList.getDaysBetween * roomList.getPrice;
-        //  public void getPrice
-            //  {
-        //     BigDecimal priceTotal=bookinList.getDaysBetween * roomList.getPrice;
-        //     return BookingManager.bookingList.priceTotal;
-        //      }
-
     public static void setNextIndex(int nextIndex)
     {
         Booking.nextIndex = nextIndex;
@@ -177,9 +146,6 @@ public class Booking {
 
 
 
-
-
-
     // Metoda pro vracení počtu hostu na pokoji
     public String add(Booking getNumberOfGuests)
     {
@@ -197,30 +163,16 @@ public class Booking {
         this.dateEnd = dateEnd;
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
-        this.workingStay = workingStay;
-        {
-            if (workingStay==true)
+        this.workingStay = workingStay==true;
             {
             System.out.println( "Ano");
             }
-        else if (workingStay == false)
+         if (workingStay == false)
              {
         System.out.println("Ne");
              }
 
-        }
-    }
 
-
-    public Booking(int index, Guest guest, String otherGuest, LocalDate dateStartRezervation, LocalDate dateEndRezervation, int numberRooms, int numberOfGuests, boolean workingStay) {
-       this.index = index;
-       this.guest= String.valueOf(guest);
-       this.otherGuest=otherGuest;
-       this.dateStart = dateStartRezervation;
-       this.dateEnd = dateEndRezervation;
-       this.numberRooms = numberRooms;
-       this.numberOfGuests = numberOfGuests;
-       this.workingStay = workingStay;
     }
 
 
@@ -242,7 +194,24 @@ public class Booking {
                 '}';
     }
 
+    //  Pokus udelat metodu na pocet noci
+    public long getDaysBetween()
+    {
+        //    for (Booking booking: BookingManager.bookingList)
+        {
+            // return booking.daysBetween;
+        } return 0;
+    };
+    //  long daysBetween = ChronoUnit.DAYS.between(dateStart,dateEnd);
 
+
+    //Pokus o celkovou cenu
+    //  BigDecimal priceTotal=bookinList.getDaysBetween * roomList.getPrice;
+    //  public void getPrice
+    //  {
+    //     BigDecimal priceTotal=bookinList.getDaysBetween * roomList.getPrice;
+    //     return BookingManager.bookingList.priceTotal;
+    //      }
 }
 
 
