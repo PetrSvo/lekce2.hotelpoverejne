@@ -121,7 +121,8 @@ public class Main {
 
 
         //Vypis pro pracovni pobyty
-        for (Booking booking : bookingList) {
+        for (Booking booking : bookingList)
+        {
             if (booking.isWorkingStay()) {
                 System.out.println(booking + " je pracovní pobyt");
             } else if (!booking.isWorkingStay()) {
@@ -131,26 +132,29 @@ public class Main {
 
         //Vypis pro počet hostu na pokoji dane rezervace
         System.out.println("Pocet hostu na pokoji rezervace " + booking1.getIndex() + " je "
-                + booking1.getNumberOfGuests());
+                                                              + booking1.getNumberOfGuests());
 
         System.out.println("Pocet hostu na pokoji rezervace " + booking2.getIndex() + " je "
-                + booking2.getNumberOfGuests());
+                                                              + booking2.getNumberOfGuests());
 
-        for (Booking booking3 : bookingList) {
+        for (Booking booking3 : bookingList)
+        {
             System.out.println("Pocet hostu na pokoji rezervace " + booking3.getIndex() + " je "
-                    + booking3.getNumberOfGuests());
+                                                                  + booking3.getNumberOfGuests());
         }
 
 
-        for (Booking booking4 : bookingList) {
+        for (Booking booking4 : bookingList)
+        {
             System.out.println("Pocet hostu na pokoji rezervace " + booking4.getIndex() + " je "
-                    + booking4.getNumberOfGuests());
+                                                                + booking4.getNumberOfGuests());
         }
 
 
-        for (Booking booking5 : bookingList) {
+        for (Booking booking5 : bookingList)
+        {
             System.out.println("Pocet hostu na pokoji rezervace " + booking5.getIndex() + " je "
-                    + booking5.getNumberOfGuests());
+                                                                 + booking5.getNumberOfGuests());
         }
 
 
@@ -164,10 +168,10 @@ public class Main {
         //Vypis pracovních pobytů
 
         BookingManager bookingManager = null;
-       // List<Booking> bookingList = bookingManager.getBooking();
+       //List<Booking> bookingList = bookingManager.getBooking();
         bookingList.forEach(System.out::println);
 
-        System.out.println(" Pocet pracovních pobytu je " + BookingManager.getNumberOfWorkingsBookings());
+        System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
 
 
         // Vypis prumerný počet hostů na rezervaci -
