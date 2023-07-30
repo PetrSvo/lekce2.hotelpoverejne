@@ -6,6 +6,7 @@ public class Booking {
 
 
     private static int nextIndex = 1;
+    public boolean isWorkingStay;
     int index;
     private int room;
     private String guest;
@@ -86,7 +87,7 @@ public class Booking {
 
     public boolean isWorkingStay()
     {
-        return workingStay;
+       return workingStay;
     }
 
     public void setWorkingStay(boolean workingStay)
@@ -153,6 +154,26 @@ public class Booking {
     }
 
 
+    // Pobyt pracovni ANO/NE
+  //   public static boolean isWorkingStay;
+    {
+  //      boolean isWorkingStay = false;
+  //      if(isWorkingStay==true)
+      {
+
+   //       System.out.println(getIndex()+" ANO");
+      }
+  //    else
+
+                  {
+     //                 System.out.println(getIndex()+"NE");
+                  }
+
+
+    }
+
+
+
 
     public Booking(int index, int room, String guest, String otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
         this.index = index;
@@ -163,14 +184,7 @@ public class Booking {
         this.dateEnd = dateEnd;
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
-        this.workingStay = workingStay==true;
-            {
-            System.out.println( "Ano");
-            }
-         if (workingStay == false)
-             {
-        System.out.println("Ne");
-             }
+        this.workingStay = workingStay;
 
 
     }
