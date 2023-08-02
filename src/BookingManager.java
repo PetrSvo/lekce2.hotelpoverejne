@@ -4,7 +4,7 @@ import java.util.List;
 public class BookingManager {
 
 
-    private static List<Booking> bookingList = new ArrayList<>();
+    static List<Booking> bookingList = new ArrayList<>();
 
         //Metoda pro vraceni Bookingmanager v metodách Main
         public List<Booking>getBooking()

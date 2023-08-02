@@ -8,7 +8,8 @@ import java.util.List;
 public class Main {
 
 
-    public static void main (String... args) {
+
+    public static  void main (String... args) {
 
 
         List<Room> roomList = new ArrayList<>();
@@ -58,7 +59,7 @@ public class Main {
                 + room2.isSeaView());
 
 
-        for (int den = 1; den <= 29; den++)     {
+        for (int den = 1; den <= 29; den++) {
             Booking booking3 = new Booking(3, 2, "CK Abc", " CK Abc",
                     LocalDate.of(2023, 6, den),
                     LocalDate.of(2023, 6, den + 1),
@@ -67,20 +68,20 @@ public class Main {
         }
 
 
-        for (Booking booking3 : bookingList)    {
+        for (Booking booking3 : bookingList) {
             System.out.println(//guest3.getName() + " zalozena "
-          //          + guest3.getBorn() + " má rezervaci od "
-                      booking3.getDateStart() + " do "
-                    + booking3.getDateEnd() + " na pokoji "
-                    + booking3.getNumberRooms() + " , kde ubytováno bude "
-                    + booking3.getNumberOfGuests() + " hostů pracovně "
-                    + booking3.isWorkingStay());
+                    //          + guest3.getBorn() + " má rezervaci od "
+                    booking3.getDateStart() + " do "
+                            + booking3.getDateEnd() + " na pokoji "
+                            + booking3.getNumberRooms() + " , kde ubytováno bude "
+                            + booking3.getNumberOfGuests() + " hostů pracovně "
+                            + booking3.isWorkingStay());
 
         }
 
 
         int Months;
-        for (Months = 6; Months <= 12; Months++)    {
+        for (Months = 6; Months <= 12; Months++) {
             Booking booking4 = new Booking(4, 1, "Alena Karasova", "Alena Karasova",
                     LocalDate.of(2023, Months, 1),
                     LocalDate.of(2023, Months, 5), 1, 1, false);
@@ -88,37 +89,36 @@ public class Main {
             bookingList.add(booking4);
         }
 
-        for (Booking booking4 : bookingList)    {
+        for (Booking booking4 : bookingList) {
             System.out.println(//guest4.getName() + " zalozena "
-                   // + guest4.getBorn() + " má rezervaci" + " od "
-                      booking4.getDateStart() + " do "
-                    + booking4.getDateEnd() + " na pokoji "
-                    + booking4.getNumberRooms() + " , kde ubytováno bude "
-                    + booking4.getNumberOfGuests() + " hostů pracovně "
-                    + booking4.isWorkingStay());
+                    // + guest4.getBorn() + " má rezervaci" + " od "
+                    booking4.getDateStart() + " do "
+                            + booking4.getDateEnd() + " na pokoji "
+                            + booking4.getNumberRooms() + " , kde ubytováno bude "
+                            + booking4.getNumberOfGuests() + " hostů pracovně "
+                            + booking4.isWorkingStay());
         }
 
-        for (int den = 1; den <= 22; den = den + 7)
-            {
-                Booking booking5 = new Booking(5, 2, "CK Abc", " CK Abc",
-                        LocalDate.of(2023, 8, den),
-                        LocalDate.of(2023, 8, den + 4),
-                        2, 1, true);
+        for (int den = 1; den <= 22; den = den + 7) {
+            Booking booking5 = new Booking(5, 2, "CK Abc", " CK Abc",
+                    LocalDate.of(2023, 8, den),
+                    LocalDate.of(2023, 8, den + 4),
+                    2, 1, true);
 
-                bookingList.add(booking5);
-            }
+            bookingList.add(booking5);
+        }
 
-            for (Booking booking5 : bookingList) {
-                System.out.println((//guest3.getName() + " zalozena "
-            //            + guest3.getBorn() + " má rezervaci" + " od "
-                         booking5.getDateStart()) + " do "
-                        + booking5.getDateEnd() + " na pokoji "
-                        + booking5.getNumberRooms() + ", kde ubytováno bude"
-                        + booking5.getNumberOfGuests() + " hostů pracovně "
-                        + booking5.isWorkingStay());
+        for (Booking booking5 : bookingList) {
+            System.out.println((//guest3.getName() + " zalozena "
+                    //            + guest3.getBorn() + " má rezervaci" + " od "
+                    booking5.getDateStart()) + " do "
+                    + booking5.getDateEnd() + " na pokoji "
+                    + booking5.getNumberRooms() + ", kde ubytováno bude"
+                    + booking5.getNumberOfGuests() + " hostů pracovně "
+                    + booking5.isWorkingStay());
 
 
-            }
+        }
 
 
         //Vypis pocet rezervaci -pro getNumberOfBooking
@@ -126,76 +126,90 @@ public class Main {
 
 
         //Vypis pro pracovni pobyty
-       for (Booking booking : bookingList)
-       {
-           if (booking.isWorkingStay) {
-               System.out.println(booking + " je pracovní pobyt");
-           }   else
-           {
-              System.out.println(booking + "je dovolena");
+        for (Booking booking : bookingList) {
+            if (booking.isWorkingStay) {
+                System.out.println(booking + " je pracovní pobyt");
+            } else {
+                System.out.println(booking + "je dovolena");
             }
         }
 
         //Vypis pro počet hostu na pokoji dane rezervace
         System.out.println("Pocet hostu na pokoji rezervace " + booking1.getIndex() + " je "
-                                                              + booking1.getNumberOfGuests());
+                + booking1.getNumberOfGuests());
 
         System.out.println("Pocet hostu na pokoji rezervace " + booking2.getIndex() + " je "
-                                                              + booking2.getNumberOfGuests());
+                + booking2.getNumberOfGuests());
 
-        for (Booking booking3 : bookingList)
-        {
+        for (Booking booking3 : bookingList) {
             System.out.println("Pocet hostu na pokoji rezervace " + booking3.getIndex() + " je "
-                                                                  + booking3.getNumberOfGuests());
+                    + booking3.getNumberOfGuests());
         }
 
 
-        for (Booking booking4 : bookingList)
-        {
+        for (Booking booking4 : bookingList) {
             System.out.println("Pocet hostu na pokoji rezervace " + booking4.getIndex() + " je "
-                                                                + booking4.getNumberOfGuests());
+                    + booking4.getNumberOfGuests());
         }
 
 
-        for (Booking booking5 : bookingList)
-        {
+        for (Booking booking5 : bookingList) {
             System.out.println("Pocet hostu na pokoji rezervace " + booking5.getIndex() + " je "
-                                                                 + booking5.getNumberOfGuests());
+                    + booking5.getNumberOfGuests());
         }
 
 
+        //Mazani z bookingManageru - výpis z tridy Booking odendán, pro booking3 nefunguje
 
-           //Mazani z bookingManageru - výpis z tridy Booking odendán, pro booking3 nefunguje
+        bookingList.remove(booking2);
+        System.out.println("Smazana rezervace " + bookingList.remove(booking2));
 
-           bookingList.remove(booking2);
-           System.out.println("Smazana rezervace " + bookingList.remove(booking2));
 
+        //Vypis Ano/Ne u pracovních pobytů
+
+        System.out.println(booking1.notIsWorkingStay());
+        System.out.println(booking2.notIsWorkingStay());
+
+        {
+            for(Booking booking3: bookingList)
+                {
+                    System.out.println(booking3.notIsWorkingStay());
+                }
+
+            for(Booking booking4: bookingList)
+            {
+                System.out.println(booking4.notIsWorkingStay());
+            }
+
+        }
 
         //Vypis pracovních pobytů
 
-        BookingManager bookingManager = null;
-       //List<Booking> bookingList = bookingManager.getBooking();
+
+        //List<Booking> bookingList = bookingManager.getBooking();
         bookingList.forEach(System.out::println);
 
-        System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
+       for(Booking bookingManager: bookingList)
+       System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
 
 
         // Vypis prumerný počet hostů na rezervaci -
         {
-            bookingList = bookingManager.getBooking();
+     //       bookingList = bookingManager.getBooking();
             bookingList.forEach(System.out::println);
 
-            System.out.println("Průměrný pocet hostu na rezervaci je " + bookingManager.getAverageGuests());
+           System.out.println("Průměrný pocet hostu na rezervaci je " + bookingManager.getAverageGuests());
         }
 
         //Vypis pro 8 pobytů pro dovolenou
 
-        System.out.println("Prvních 8 pobytů pro dovolenou je "+bookingManager.getEightWorkingStay());
+        System.out.println("Prvních 8 pobytů pro dovolenou je " + bookingManager.getEightWorkingStay());
 
 
 
     }
 }
+
 
 
 

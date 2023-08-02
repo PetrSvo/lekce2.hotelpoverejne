@@ -154,22 +154,21 @@ public class Booking {
     }
 
 
-    // Pobyt pracovni ANO/NE
-  //   public static boolean isWorkingStay;
+    // Metoda pobyt pracovni ANO/NE
+     public String notIsWorkingStay()
     {
-  //      boolean isWorkingStay = false;
-  //      if(isWorkingStay==true)
-      {
+        for(Booking booking: BookingManager.bookingList)
+        if(booking.isWorkingStay)
+        {
+            return "ANO";
+        }
 
-   //       System.out.println(getIndex()+" ANO");
-      }
-  //    else
-
+      else
                   {
-     //                 System.out.println(getIndex()+"NE");
+                    return "NE";
                   }
 
-
+        return "ANO";
     }
 
 
