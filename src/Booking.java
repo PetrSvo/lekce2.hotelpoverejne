@@ -85,10 +85,19 @@ public class Booking {
         this.numberOfGuests = numberOfGuests;
     }
 
-    public boolean isWorkingStay()
+
+
+    public String isWorkingStay()
     {
-       return workingStay;
+        if (isWorkingStay)
+        {
+            return ("ANO");
+        } else
+            {
+                return ("Ne");
+            }
     }
+
 
     public void setWorkingStay(boolean workingStay)
     {

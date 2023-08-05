@@ -190,7 +190,7 @@ public class Main {
         bookingList.forEach(System.out::println);
 
        for(Booking bookingManager: bookingList)
-       System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
+       //   System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
 
 
         // Vypis prumerný počet hostů na rezervaci -
@@ -198,12 +198,12 @@ public class Main {
      //       bookingList = bookingManager.getBooking();
             bookingList.forEach(System.out::println);
 
-           System.out.println("Průměrný pocet hostu na rezervaci je " + bookingManager.getAverageGuests());
+       //    System.out.println("Průměrný pocet hostu na rezervaci je " + bookingManager.getAverageGuests());
         }
 
         //Vypis pro 8 pobytů pro dovolenou
 
-        System.out.println("Prvních 8 pobytů pro dovolenou je " + bookingManager.getEightWorkingStay());
+   //     System.out.println("Prvních 8 pobytů pro dovolenou je " + bookingManager.getEightWorkingStay());
 
 
 

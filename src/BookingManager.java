@@ -66,7 +66,7 @@ public class BookingManager {
          int numberOfWorkingsBookings=0;
              for(Booking booking:bookingList)
             {
-             if (booking.isWorkingStay())
+          //   if (booking.isWorkingStay())
                  {
                     numberOfWorkingsBookings++;
                  }
@@ -89,7 +89,7 @@ public class BookingManager {
             {
 
                     for (Booking booking : bookingList)
-                        if (!booking.isWorkingStay())
+                    // if (!booking.isWorkingStay())
                         {
                  //          eightHoliday +=(booking.getIndex());
                         }
