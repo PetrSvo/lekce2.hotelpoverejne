@@ -6,6 +6,7 @@ public class Booking {
 
 
     private static int nextIndex = 1;
+    private String workingStayText;
     public boolean isWorkingStay;
     int index;
     private int room;
@@ -14,11 +15,22 @@ public class Booking {
     private LocalDate dateEnd;
     private int numberRooms;
     private int numberOfGuests;
-    private boolean workingStay;
     private LocalDate startDateRezervation;
     private LocalDate endDateRezervation;
 
-  //  Mazani rezervace
+
+
+    public void setWorkingStayText ()
+    {
+        workingStayText = isWorkingStayText();
+    }
+
+    public String getWorkingStayText ()
+    {
+        return workingStayText;
+    }
+
+    //  Mazani rezervace
     public static int clearBooking(int i) {
         return nextIndex;
     }
@@ -86,8 +98,11 @@ public class Booking {
     }
 
 
+    public boolean isWorkingStay(){
+        return isWorkingStay;
+    }
 
-    public String isWorkingStay()
+    public String isWorkingStayText()
     {
         if (isWorkingStay)
         {
@@ -99,10 +114,6 @@ public class Booking {
     }
 
 
-    public void setWorkingStay(boolean workingStay)
-    {
-        this.workingStay = workingStay;
-    }
 
     public void setStartDateRezervation(LocalDate startDateRezervation)
     {
@@ -157,9 +168,9 @@ public class Booking {
 
 
     // Metoda pro vracení počtu hostu na pokoji
-    public String add(Booking getNumberOfGuests)
+    public int add(Booking getNumberOfGuests)
     {
-        return getNumberOfGuests.getOtherGuest();
+        return getNumberOfGuests();
     }
 
 
@@ -183,7 +194,7 @@ public class Booking {
 
 
 
-    public Booking(int index, int room, String guest, String otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay) {
+    public Booking(int index, int room, String guest, String otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, String workingStayText) {
         this.index = index;
         this.room = room;
         this.guest = guest;
@@ -192,7 +203,8 @@ public class Booking {
         this.dateEnd = dateEnd;
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
-        this.workingStay = workingStay;
+        this.workingStayText = workingStayText;
+       
 
 
     }
@@ -209,7 +221,7 @@ public class Booking {
                 ", dateEnd=" + dateEnd +
                 ", numberRooms=" + numberRooms +
                 ", numberOfGuests=" + numberOfGuests +
-                ", workingStay=" + workingStay +
+                ", workingStay=" + workingStayText +
                 ", startDateRezervation=" + startDateRezervation +
                 ", endDateRezervation=" + endDateRezervation +
                 ", otherGuest=" + otherGuest +

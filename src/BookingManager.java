@@ -66,7 +66,7 @@ public class BookingManager {
          int numberOfWorkingsBookings=0;
              for(Booking booking:bookingList)
             {
-          //   if (booking.isWorkingStay())
+             if (booking.isWorkingStay())
                  {
                     numberOfWorkingsBookings++;
                  }
@@ -135,7 +135,21 @@ public class BookingManager {
         return new ArrayList<>(roomList);
         }
 
-    }
+
+
+
+         List<BookingManager>bookingManagerList =new ArrayList<>();
+
+
+         public void add(BookingManager newBookingManager)
+         {
+             bookingManagerList.add(newBookingManager);
+         }
+         public ArrayList<BookingManager>getAllBookingManager()
+         {
+             return new ArrayList<>(bookingManagerList);
+         }
+}
 
 
 

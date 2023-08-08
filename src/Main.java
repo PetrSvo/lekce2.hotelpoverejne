@@ -26,12 +26,12 @@ public class Main {
         List<Booking> bookingList = new ArrayList<>();
         Booking booking1 = new Booking(1, 3, "Karel Dvorak", "Karel Dvořak",
                 LocalDate.of(2023, 6, 1),
-                LocalDate.of(2023, 6, 7), 3, 5, true);
+                LocalDate.of(2023, 6, 7), 3, 5, "ano");
         bookingList.add(booking1);
 
         Booking booking2 = new Booking(2, 2, "Karel Dvorak", "Karel Dvorak",
                 LocalDate.of(2023, 8, 18),
-                LocalDate.of(2023, 8, 21), 2, 2, false);
+                LocalDate.of(2023, 8, 21), 2, 2, "Ne");
         bookingList.add(booking2);
 
 
@@ -41,7 +41,7 @@ public class Main {
                 + booking1.getDateEnd() + " na pokoji "
                 + booking1.getNumberRooms() + " , kde ubytováno bude "
                 + booking1.getNumberOfGuests() + " hostů pracovně "
-                + booking1.isWorkingStay() + " má lůžek "
+                + booking1.getWorkingStayText() + " má lůžek "
                 + room1.getBeeds() + " s balkonem "
                 + room1.isBalkon() + " výhledem na moře "
                 + room1.isSeaView());
@@ -53,7 +53,7 @@ public class Main {
                 + booking2.getDateEnd() + " na pokoji "
                 + booking2.getNumberRooms() + " , kde ubytováno bude "
                 + booking2.getNumberOfGuests() + " hostů pracovně "
-                + booking2.isWorkingStay() + " má lůžek "
+                + booking2.getWorkingStayText() + " má lůžek "
                 + room2.getBeeds() + " s balkonem "
                 + room2.isBalkon() + " výhledem na moře "
                 + room2.isSeaView());
@@ -63,7 +63,7 @@ public class Main {
             Booking booking3 = new Booking(3, 2, "CK Abc", " CK Abc",
                     LocalDate.of(2023, 6, den),
                     LocalDate.of(2023, 6, den + 1),
-                    2, 1, true);
+                    2, 1, "ano");
             bookingList.add(booking3);
         }
 
@@ -75,7 +75,7 @@ public class Main {
                             + booking3.getDateEnd() + " na pokoji "
                             + booking3.getNumberRooms() + " , kde ubytováno bude "
                             + booking3.getNumberOfGuests() + " hostů pracovně "
-                            + booking3.isWorkingStay());
+                            + booking3.getWorkingStayText());
 
         }
 
@@ -84,7 +84,7 @@ public class Main {
         for (Months = 6; Months <= 12; Months++) {
             Booking booking4 = new Booking(4, 1, "Alena Karasova", "Alena Karasova",
                     LocalDate.of(2023, Months, 1),
-                    LocalDate.of(2023, Months, 5), 1, 1, false);
+                    LocalDate.of(2023, Months, 5), 1, 1, "ne");
 
             bookingList.add(booking4);
         }
@@ -94,16 +94,16 @@ public class Main {
                     // + guest4.getBorn() + " má rezervaci" + " od "
                     booking4.getDateStart() + " do "
                             + booking4.getDateEnd() + " na pokoji "
-                            + booking4.getNumberRooms() + " , kde ubytováno bude "
+                            + booking4.getNumberRooms() + " ,kde ubytováno bude "
                             + booking4.getNumberOfGuests() + " hostů pracovně "
-                            + booking4.isWorkingStay());
+                            + booking4.getWorkingStayText());
         }
 
         for (int den = 1; den <= 22; den = den + 7) {
             Booking booking5 = new Booking(5, 2, "CK Abc", " CK Abc",
                     LocalDate.of(2023, 8, den),
                     LocalDate.of(2023, 8, den + 4),
-                    2, 1, true);
+                    2, 1, "ano");
 
             bookingList.add(booking5);
         }
@@ -115,7 +115,7 @@ public class Main {
                     + booking5.getDateEnd() + " na pokoji "
                     + booking5.getNumberRooms() + ", kde ubytováno bude"
                     + booking5.getNumberOfGuests() + " hostů pracovně "
-                    + booking5.isWorkingStay());
+                    + booking5.getWorkingStayText());
 
 
         }
@@ -190,25 +190,30 @@ public class Main {
         bookingList.forEach(System.out::println);
 
        for(Booking bookingManager: bookingList)
-       //   System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
-
+       {
+           //    System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
+       }
 
         // Vypis prumerný počet hostů na rezervaci -
-        {
-     //       bookingList = bookingManager.getBooking();
+
+     //    bookingList = bookingManager.getBooking();
             bookingList.forEach(System.out::println);
 
-       //    System.out.println("Průměrný pocet hostu na rezervaci je " + bookingManager.getAverageGuests());
+
+            for   (BookingManager bookingManager:bookingManagerList)
+         {
+            System.out.println("Průměrný pocet hostu na rezervaci je " + bookingManager.getAverageGuests());
         }
 
         //Vypis pro 8 pobytů pro dovolenou
 
-   //     System.out.println("Prvních 8 pobytů pro dovolenou je " + bookingManager.getEightWorkingStay());
+        //  System.out.println("Prvních 8 pobytů pro dovolenou je " + bookingManager.getEightWorkingStay());
 
 
 
     }
 }
+
 
 
 
