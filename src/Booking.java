@@ -194,7 +194,7 @@ public class Booking {
 
 
 
-    public Booking(int index, int room, String guest, String otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, String workingStayText) {
+    public Booking(int index, int room, String guest, String otherGuest, LocalDate dateStart, LocalDate dateEnd, int numberRooms, int numberOfGuests, boolean workingStay, String workingStayText) {
         this.index = index;
         this.room = room;
         this.guest = guest;
@@ -203,6 +203,7 @@ public class Booking {
         this.dateEnd = dateEnd;
         this.numberRooms = numberRooms;
         this.numberOfGuests = numberOfGuests;
+        this.isWorkingStay = workingStay;
         this.workingStayText = workingStayText;
        
 
@@ -236,6 +237,7 @@ public class Booking {
             // return booking.daysBetween;
         } return 0;
     };
+
     //  long daysBetween = ChronoUnit.DAYS.between(dateStart,dateEnd);
 
 
