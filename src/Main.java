@@ -183,32 +183,34 @@ public class Main {
 
         }
 
+
+        //Přidání bookingManagerListu do Main
+         List<BookingManager>bookingManagerList= new ArrayList<>();
+
+
+
         //Vypis pracovních pobytů
 
 
-        //List<Booking> bookingList = bookingManager.getBooking();
-        bookingList.forEach(System.out::println);
 
-       for(Booking bookingManager: bookingList)
+       for(BookingManager bookingManager: bookingManagerList)
        {
                   System.out.println(" Pocet pracovních pobytu je " + bookingManager.getNumberOfWorkingsBookings());
        }
 
         // Vypis prumerný počet hostů na rezervaci -
 
-     //    bookingList = bookingManager.getBooking();
-            bookingList.forEach(System.out::println);
-
-
-            for   (Booking bookingManager:bookingList)
+        for   (BookingManager bookingManager:bookingManagerList)
          {
             System.out.println("Průměrný pocet hostu na rezervaci je " + bookingManager.getAverageGuests());
         }
 
         //Vypis pro 8 pobytů pro dovolenou
 
-          System.out.println("Prvních 8 pobytů pro dovolenou je " + bookingManager.getEightWorkingStay());
-
+        for   (BookingManager bookingManager:bookingManagerList)
+        {
+            System.out.println("Prvních 8 pobytů pro dovolenou je " + bookingManager.getEightWorkingStay());
+        }
 
 
     }
